@@ -1,0 +1,347 @@
+[
+  {
+    "level": "Asas",
+    "questions": [
+      {
+        "position": 1,
+        "prompt": "1 cm bersamaan dengan berapa milimeter?",
+        "options": [
+          "1 mm",
+          "10 mm",
+          "100 mm",
+          "1,000 mm"
+        ],
+        "correct_option": 1
+      },
+      {
+        "position": 2,
+        "prompt": "Tukarkan 3.4 m kepada cm.",
+        "options": [
+          "34 cm",
+          "340 cm",
+          "3,400 cm",
+          "0.034 cm"
+        ],
+        "correct_option": 1
+      },
+      {
+        "position": 3,
+        "prompt": "2,500 m bersamaan dengan…",
+        "options": [
+          "0.25 km",
+          "2.5 km",
+          "25 km",
+          "250 km"
+        ],
+        "correct_option": 1
+      },
+      {
+        "position": 4,
+        "prompt": "Tukarkan 0.75 km kepada m.",
+        "options": [
+          "75 m",
+          "750 m",
+          "7,500 m",
+          "0.00075 m"
+        ],
+        "correct_option": 1
+      },
+      {
+        "position": 5,
+        "prompt": "12.5 cm bersamaan dengan…",
+        "options": [
+          "1.25 mm",
+          "12.5 mm",
+          "125 mm",
+          "1,250 mm"
+        ],
+        "correct_option": 2
+      },
+      {
+        "position": 6,
+        "prompt": "2.006 km bersamaan dengan berapa meter?",
+        "options": [
+          "20.06 m",
+          "200.6 m",
+          "2,006 m",
+          "20,060 m"
+        ],
+        "correct_option": 2
+      },
+      {
+        "position": 7,
+        "prompt": "Tukarkan 4,850 mm kepada m.",
+        "options": [
+          "0.485 m",
+          "4.85 m",
+          "48.5 m",
+          "485 m"
+        ],
+        "correct_option": 1
+      },
+      {
+        "position": 8,
+        "prompt": "3 m 25 cm ditulis dalam meter ialah…",
+        "options": [
+          "3.025 m",
+          "3.25 m",
+          "3.5 m",
+          "325 m"
+        ],
+        "correct_option": 1
+      },
+      {
+        "position": 9,
+        "prompt": "1.2 m + 85 cm bersamaan dengan…",
+        "options": [
+          "1.285 m",
+          "2.05 m",
+          "2.5 m",
+          "9.7 m"
+        ],
+        "correct_option": 1
+      },
+      {
+        "position": 10,
+        "prompt": "Laluan sepanjang 1.75 km bersamaan dengan berapa meter?",
+        "options": [
+          "175 m",
+          "1,075 m",
+          "1,750 m",
+          "17,500 m"
+        ],
+        "correct_option": 2
+      }
+    ]
+  },
+  {
+    "level": "Sederhana",
+    "questions": [
+      {
+        "position": 1,
+        "prompt": "48.5 cm = ? mm",
+        "options": [
+          "485 mm",
+          "48.5 mm",
+          "4,850 mm",
+          "4.85 mm"
+        ],
+        "correct_option": 0
+      },
+      {
+        "position": 2,
+        "prompt": "325 cm = ? m",
+        "options": [
+          "32.5 m",
+          "0.325 m",
+          "3.25 m",
+          "32,500 m"
+        ],
+        "correct_option": 2
+      },
+      {
+        "position": 3,
+        "prompt": "850 mm = ? cm",
+        "options": [
+          "8.5 cm",
+          "85 cm",
+          "8,500 cm",
+          "0.85 cm"
+        ],
+        "correct_option": 1
+      },
+      {
+        "position": 4,
+        "prompt": "4.25 m = ? cm",
+        "options": [
+          "42.5 cm",
+          "4,250 cm",
+          "0.0425 cm",
+          "425 cm"
+        ],
+        "correct_option": 3
+      },
+      {
+        "position": 5,
+        "prompt": "3,500 m = ? km",
+        "options": [
+          "3.5 km",
+          "35 km",
+          "0.35 km",
+          "3,500,000 km"
+        ],
+        "correct_option": 0
+      },
+      {
+        "position": 6,
+        "prompt": "0.906 km = ? m",
+        "options": [
+          "90.6 m",
+          "9,060 m",
+          "906 m",
+          "0.906 m"
+        ],
+        "correct_option": 2
+      },
+      {
+        "position": 7,
+        "prompt": "6.08 m = ? mm",
+        "options": [
+          "608 mm",
+          "6,080 mm",
+          "60.8 mm",
+          "60,800 mm"
+        ],
+        "correct_option": 1
+      },
+      {
+        "position": 8,
+        "prompt": "7,025 mm = ? m",
+        "options": [
+          "70.25 m",
+          "0.7025 m",
+          "702.5 m",
+          "7.025 m"
+        ],
+        "correct_option": 3
+      },
+      {
+        "position": 9,
+        "prompt": "0.045 km = ? cm",
+        "options": [
+          "4,500 cm",
+          "450 cm",
+          "45 cm",
+          "45,000 cm"
+        ],
+        "correct_option": 0
+      },
+      {
+        "position": 10,
+        "prompt": "12,500 cm = ? km",
+        "options": [
+          "0.0125 km",
+          "1.25 km",
+          "0.125 km",
+          "125 km"
+        ],
+        "correct_option": 2
+      }
+    ]
+  },
+  {
+    "level": "Sukar",
+    "questions": [
+      {
+        "position": 1,
+        "prompt": "Aina berjalan 1.275 km pada waktu pagi dan 850 m pada waktu petang. Berapakah jumlah jarak dalam km?",
+        "options": [
+          "1.36 km",
+          "2.125 km",
+          "13.6 km",
+          "2,125 km"
+        ],
+        "correct_option": 1
+      },
+      {
+        "position": 2,
+        "prompt": "Tali 5 m dipotong kepada 8 bahagian sama panjang. Berapakah panjang setiap bahagian dalam cm?",
+        "options": [
+          "6.25 cm",
+          "625 cm",
+          "40 cm",
+          "62.5 cm"
+        ],
+        "correct_option": 3
+      },
+      {
+        "position": 3,
+        "prompt": "Pita sepanjang 3.006 m dipotong sebanyak 128.5 cm. Berapakah baki dalam mm?",
+        "options": [
+          "1,721 mm",
+          "172.1 mm",
+          "1,851.5 mm",
+          "4,285 mm"
+        ],
+        "correct_option": 0
+      },
+      {
+        "position": 4,
+        "prompt": "Laluan A panjangnya 2.45 km dan laluan B panjangnya 1,875 m. Berapakah beza panjang dalam m?",
+        "options": [
+          "4,325 m",
+          "57.5 m",
+          "575 m",
+          "0.575 m"
+        ],
+        "correct_option": 2
+      },
+      {
+        "position": 5,
+        "prompt": "Buku A panjangnya 18.5 cm dan buku B panjangnya 167 mm. Berapakah beza panjang dalam cm?",
+        "options": [
+          "18 cm",
+          "1.8 cm",
+          "35.2 cm",
+          "0.18 cm"
+        ],
+        "correct_option": 1
+      },
+      {
+        "position": 6,
+        "prompt": "Empat batang paip masing-masing panjangnya 1.125 m. Berapakah jumlah panjang dalam cm?",
+        "options": [
+          "45 cm",
+          "4,500 cm",
+          "112.5 cm",
+          "450 cm"
+        ],
+        "correct_option": 3
+      },
+      {
+        "position": 7,
+        "prompt": "Jarak rumah ke sekolah ialah 0.875 km. Selepas berjalan 350 m, berapakah baki jarak dalam km?",
+        "options": [
+          "0.525 km",
+          "0.84 km",
+          "1.225 km",
+          "525 km"
+        ],
+        "correct_option": 0
+      },
+      {
+        "position": 8,
+        "prompt": "Reben 2 m 35 cm disambung dengan reben 1,650 mm. Berapakah jumlah panjang dalam m?",
+        "options": [
+          "2.515 m",
+          "3.95 m",
+          "4 m",
+          "40 m"
+        ],
+        "correct_option": 2
+      },
+      {
+        "position": 9,
+        "prompt": "Satu pusingan trek ialah 120 m. Berapakah jarak 3.5 pusingan dalam km?",
+        "options": [
+          "4.2 km",
+          "0.42 km",
+          "420 km",
+          "0.042 km"
+        ],
+        "correct_option": 1
+      },
+      {
+        "position": 10,
+        "prompt": "Kabel 6.4 m dipotong kepada tiga bahagian 75 cm setiap satu. Berapakah baki kabel dalam cm?",
+        "options": [
+          "565 cm",
+          "225 cm",
+          "6.175 cm",
+          "415 cm"
+        ],
+        "correct_option": 3
+      }
+    ]
+  }
+]

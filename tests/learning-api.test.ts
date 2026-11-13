@@ -1,0 +1,45 @@
+import {test,after} from 'node:test';
+import assert from 'node:assert/strict';
+import {GET,POST} from '../app/api/learning/route';
+import {SESSION_COOKIE} from '../lib/academy-auth';
+const original=globalThis.fetch,oldKey=process.env.SUPABASE_PUBLISHABLE_KEY;
+const uid='00000000-0000-4000-8000-000000000003',submission='10000000-0000-4000-8000-000000000001',base='https://academy.example',token='fixture.auth.token';
+let counter=0;
+const req=(body:any,cookie=true,origin=base)=>new Request(base+'/api/learning',{method:'POST',headers:{'Content-Type':'application/json',Origin:origin,...(cookie?{Cookie:SESSION_COOKIE+'='+token}:{})},body:JSON.stringify(body)});
+function mock({workspace=false,missing=false,denied=false,badReceipt=false}:{workspace?:boolean;missing?:boolean;denied?:boolean;badReceipt?:boolean}={}){
+ const calls:{path:string;body:any;authorization:string|null}[]=[];
+ globalThis.fetch=(async(input:any,options:any)=>{const url=new URL(String(input));const body=JSON.parse(options?.body||'{}');calls.push({path:url.pathname,body,authorization:new Headers(options?.headers).get('Authorization')});
+  if(url.pathname==='/auth/v1/user')return Response.json({id:uid,email:'fixture@example.invalid',user_metadata:{},role:'authenticated',aud:'authenticated'});
+  if(url.pathname==='/rest/v1/profiles')return Response.json([{id:uid,role:'student',full_name:'Fixture',class_id:'9007199254740994'}]);
+  if(url.pathname.endsWith('/ua_teacher_workspace_context'))return Response.json(workspace?{teacher_id:uid,scope:'owned_classes',version:2,class_ids:['9007199254740994']}:null);
+  if(url.pathname.endsWith('/ua_account_preferences'))return Response.json({code:'PGRST202',message:'Not installed in fixture'},{status:404});
+  if(missing)return Response.json({code:'PGRST202',message:'Function missing'},{status:404});
+  if(denied)return Response.json({code:'42501',message:'Class access denied'},{status:403});
+  if(url.pathname.endsWith('/ua_submit_quiz'))return Response.json({id:badReceipt?'wrong-id':submission,score:7,max_score:10,submitted_at:'2026-11-03T09:00:00Z'});
+  if(url.pathname.endsWith('/ua_student_results'))return Response.json([{id:submission,score:7,max_score:10,submitted_at:'2026-11-03T09:00:00Z'}]);
+  if(url.pathname.endsWith('/ua_student_join_class'))return Response.json({student_id:uid,class_id:'9007199254740994',class_name:'5 Amanah'});
+  if(url.pathname.endsWith('/ua_teacher_class_roster'))return Response.json([]);
+  if(url.pathname.endsWith('/ua_teacher_rename_class'))return Response.json({id:body.p_class_id,name:body.p_name});
+  return Response.json({});
+ }) as typeof fetch;return calls;
+}
+test('learning API has verified ownership boundaries',async t=>{
+ process.env.SUPABASE_PUBLISHABLE_KEY='sb_publishable_fixture_only';
+ await t.test('anonymous submission never reaches a grading RPC',async()=>{const calls=mock();const r=await POST(req({action:'submit-quiz'},false));assert.equal(r.status,401);assert.equal(calls.length,0);});
+ await t.test('cross-origin grading is blocked',async()=>{const c=mock();assert.equal((await POST(req({action:'submit-quiz'},true,'https://other.example'))).status,403);assert.equal(c.length,0);});
+ await t.test('short answer arrays are rejected before grading',async()=>{const c=mock();const r=await POST(req({action:'submit-quiz',submissionId:submission,version:'tokoyami-5.1.1-v1',answers:[1,2]}));assert.equal(r.status,400);assert.equal(c.some(x=>x.path.endsWith('/ua_submit_quiz')),false);});
+ await t.test('forged score, pupil, class and answer key are never sent to SQL',async()=>{const c=mock();const r=await POST(req({action:'submit-quiz',submissionId:submission,version:'tokoyami-5.1.1-v1',answers:Array(10).fill(1),score:999,student_id:'victim',class_id:'9',answerKey:Array(10).fill(1)}));assert.equal(r.status,200);assert.deepEqual(c.find(x=>x.path.endsWith('/ua_submit_quiz'))?.body,{p_submission:submission,p_answers:Array(10).fill(1),p_version:'tokoyami-5.1.1-v1'});const d=await r.json() as any;assert.equal(d.saved.score,7);assert.equal(d.userId,uid);assert.ok(c.every(x=>x.authorization==='Bearer '+token));});
+ await t.test('missing migration is an explicit unsaved response, not success',async()=>{mock({missing:true});const r=await POST(req({action:'submit-quiz',submissionId:submission,version:'tokoyami-5.1.1-v1',answers:Array(10).fill(1)}));assert.equal(r.status,503);assert.equal((await r.json() as any).code,'learning_setup_required');});
+ await t.test('each level version reaches the same authenticated grading RPC',async()=>{for(const version of ['tokoyami-5.1.1-medium-v1','tokoyami-5.1.1-hard-v1']){const c=mock();const r=await POST(req({action:'submit-quiz',submissionId:submission,version,answers:Array(10).fill(1)}));assert.equal(r.status,200);assert.equal(c.find(x=>x.path.endsWith('/ua_submit_quiz'))?.body.p_version,version);}});
+ await t.test('invented levels cannot be submitted',async()=>{const c=mock();const r=await POST(req({action:'submit-quiz',submissionId:submission,version:'unlocked-by-browser',answers:Array(10).fill(1)}));assert.equal(r.status,400);assert.equal(c.some(x=>x.path.endsWith('/ua_submit_quiz')),false);});
+ await t.test('a wrong database receipt is never marked saved',async()=>{mock({badReceipt:true});const r=await POST(req({action:'submit-quiz',submissionId:submission,version:'tokoyami-5.1.1-v1',answers:Array(10).fill(1)}));assert.equal(r.status,502);});
+ await t.test('workspace teachers cannot create official pupil marks',async()=>{const c=mock({workspace:true});const r=await POST(req({action:'submit-quiz',submissionId:submission,version:'tokoyami-5.1.1-v1',answers:Array(10).fill(1)}));assert.equal(r.status,403);assert.equal(c.some(x=>x.path.endsWith('/ua_submit_quiz')),false);});
+ await t.test('stale tabs cannot submit against another active identity',async()=>{const c=mock();const r=await POST(req({action:'submit-quiz',expectedUser:'other-user',submissionId:submission,version:'tokoyami-5.1.1-v1',answers:Array(10).fill(1)}));assert.equal(r.status,409);assert.equal(c.some(x=>x.path.endsWith('/ua_submit_quiz')),false);});
+ await t.test('own result history receives no client-selected pupil ID',async()=>{const c=mock();const r=await GET(new Request(base+'/api/learning?action=results&studentId=victim',{headers:{Cookie:SESSION_COOKIE+'='+token}}));assert.equal(r.status,200);assert.deepEqual(c.find(x=>x.path.endsWith('/ua_student_results'))?.body,{});});
+ await t.test('pupil cannot read a teacher class roster',async()=>{const c=mock();const r=await GET(new Request(base+'/api/learning?action=roster&classId=9007199254740994',{headers:{Cookie:SESSION_COOKIE+'='+token}}));assert.equal(r.status,403);assert.equal(c.some(x=>x.path.endsWith('/ua_teacher_class_roster')),false);});
+ await t.test('bigint strings survive the rename endpoint exactly',async()=>{const c=mock({workspace:true});const r=await POST(req({action:'rename-class',classId:'9007199254740994',name:'5 Bestari',teacher_id:'victim'}));assert.equal(r.status,200);assert.deepEqual(c.find(x=>x.path.endsWith('/ua_teacher_rename_class'))?.body,{p_class_id:'9007199254740994',p_name:'5 Bestari'});});
+ await t.test('unsafe JS numeric class IDs are rejected',async()=>{const c=mock({workspace:true});const r=await POST(req({action:'rename-class',classId:9007199254740994,name:'5 Bestari'}));assert.equal(r.status,400);assert.equal(c.some(x=>x.path.endsWith('/ua_teacher_rename_class')),false);});
+ await t.test('database ownership denials remain denials',async()=>{mock({workspace:true,denied:true});const r=await POST(req({action:'rename-class',classId:'9007199254740994',name:'Stolen'}));assert.equal(r.status,403);assert.equal((await r.json() as any).code,'42501');});
+ await t.test('joining requires a high entropy invitation, not a class ID',async()=>{const c=mock();const r=await POST(req({action:'join-class',code:'9007199254740994'}));assert.equal(r.status,400);assert.equal(c.some(x=>x.path.endsWith('/ua_student_join_class')),false);});
+});
+after(()=>{globalThis.fetch=original;if(oldKey===undefined)delete process.env.SUPABASE_PUBLISHABLE_KEY;else process.env.SUPABASE_PUBLISHABLE_KEY=oldKey;});

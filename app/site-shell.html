@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#031426">
+  <meta name="description" content="Laman pembelajaran interaktif Matematik Tahun 5: panjang dan penukaran unit.">
+  <meta name="guru-deku-api" content="/api/guru-deku">
+  <title>PLUS ULTRA MATH HEROES — Misi Ukuran Pahlawan</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#kandungan">Langkau ke kandungan</a>
+
+  <header class="site-header" aria-label="Navigasi utama">
+    <a class="brand" href="#rumah" aria-label="PLUS ULTRA MATH HEROES — Rumah">
+      <span class="brand-bolt">ϟ</span>
+      <span><strong>PLUS ULTRA</strong><small>MATH HEROES</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">☰ <span>Menu</span></button>
+    <nav id="main-nav" class="main-nav">
+      <a href="#rumah" data-route="rumah" style="--nav:#00b988;--portrait-image:url('assets/nav-chibi-deku.png')"><span class="nav-portrait" aria-hidden="true"></span><span class="nav-icon" aria-hidden="true">⌂</span><span class="nav-copy"><strong>Rumah</strong><small>Deku</small></span></a>
+      <a href="#nota" data-route="nota" style="--nav:#e8513b;--portrait-image:url('assets/nav-chibi-bakugo.png')"><span class="nav-portrait" aria-hidden="true"></span><span class="nav-icon" aria-hidden="true">▤</span><span class="nav-copy"><strong>Nota</strong><small>Bakugo</small></span></a>
+      <a href="#video" data-route="video" style="--nav:#209cd9;--portrait-image:url('assets/nav-chibi-todoroki.png')"><span class="nav-portrait" aria-hidden="true"></span><span class="nav-icon" aria-hidden="true">▶</span><span class="nav-copy"><strong>Video</strong><small>Todoroki</small></span></a>
+      <a href="#gamifikasi" data-route="gamifikasi" style="--nav:#ed7d35;--portrait-image:url('assets/nav-chibi-kirishima.png')"><span class="nav-portrait" aria-hidden="true"></span><span class="nav-icon" aria-hidden="true">🎮</span><span class="nav-copy"><strong>Gamifikasi</strong><small>Red Riot</small></span></a>
+      <a href="#quiz" data-route="quiz" style="--nav:#9453c8;--portrait-image:url('assets/nav-chibi-tokoyami.png')"><span class="nav-portrait" aria-hidden="true"></span><span class="nav-icon" aria-hidden="true">★</span><span class="nav-copy"><strong>Quiz</strong><small>Tokoyami</small></span></a>
+      <a href="#sijil" data-route="sijil" style="--nav:#dcae23;--portrait-image:url('assets/nav-chibi-allmight.png')"><span class="nav-portrait" aria-hidden="true"></span><span class="nav-icon" aria-hidden="true">▧</span><span class="nav-copy"><strong>Sijil</strong><small>All Might</small></span></a>
+      <a href="#refleksi" data-route="refleksi" style="--nav:#0fac9d;--portrait-image:url('assets/nav-chibi-froppy.png')"><span class="nav-portrait" aria-hidden="true"></span><span class="nav-icon" aria-hidden="true">✦</span><span class="nav-copy"><strong>Refleksi</strong><small>Froppy</small></span></a>
+    </nav>
+  </header>
+
+  <main id="kandungan">
+    <section id="rumah" class="page page-home active" data-page="rumah" aria-labelledby="home-title">
+      <h1 id="home-title" class="sr-only">PLUS ULTRA MATH HEROES: MISI UKURAN PAHLAWAN</h1>
+      <div class="hero-stage" aria-label="Pintu masuk tujuh misi Matematik U.A. Academy">
+        <div class="hero-stage-title"><span>PLUS ULTRA:</span><strong>MISI UKURAN<br><em>PAHLAWAN</em></strong><small>MATEMATIK TAHUN 5 / PANJANG DAN PENUKARAN UNIT</small><p>KUASAI ILMU,<br>KETEPATAN UKURAN,<br>SEMANGAT PLUS ULTRA!</p></div>
+        <nav class="hero-stage-links" aria-label="Pilih halaman pembelajaran">
+          <a class="hero-action hero-action-home" href="#rumah" aria-label="Rumah — Deku" style="--hero-glow:#25ff9b;--hero-delay:0s"><img class="hero-action-art" src="assets/home-button-rumah.png" alt="" loading="eager" decoding="async"></a>
+          <a class="hero-action hero-action-nota" href="#nota" aria-label="Nota — Bakugo" style="--hero-glow:#ff3a39;--hero-delay:.35s"><img class="hero-action-art" src="assets/home-button-nota.png" alt="" loading="eager" decoding="async"></a>
+          <a class="hero-action hero-action-video" href="#video" aria-label="Video Interaktif — Todoroki" style="--hero-glow:#20d9ff;--hero-delay:.7s"><img class="hero-action-art" src="assets/home-button-video.png" alt="" loading="eager" decoding="async"></a>
+          <a class="hero-action hero-action-game" href="#gamifikasi" aria-label="Gamifikasi — Red Riot" style="--hero-glow:#ff8b1d;--hero-delay:1.05s"><img class="hero-action-art" src="assets/home-button-gamifikasi.png" alt="" loading="eager" decoding="async"></a>
+          <a class="hero-action hero-action-quiz" href="#quiz" aria-label="Kuiz — Tokoyami" style="--hero-glow:#bf48ff;--hero-delay:1.4s"><img class="hero-action-art" src="assets/home-button-kuiz.png" alt="" loading="eager" decoding="async"></a>
+          <a class="hero-action hero-action-sijil" href="#sijil" aria-label="Sijil — All Might" style="--hero-glow:#ffd233;--hero-delay:1.75s"><img class="hero-action-art" src="assets/home-button-sijil.png" alt="" loading="eager" decoding="async"></a>
+          <a class="hero-action hero-action-reflection" href="#refleksi" aria-label="Refleksi — Froppy" style="--hero-glow:#20e8d4;--hero-delay:2.1s"><img class="hero-action-art" src="assets/home-button-refleksi.png" alt="" loading="eager" decoding="async"></a>
+        </nav>
+      </div>
+
+      <section id="home-guide" class="home-conversion-hero" aria-labelledby="home-guide-title">
+        <video class="home-background-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1" poster="assets/home-guide-background-poster.jpg"><source src="assets/home-guide-background.mp4" type="video/mp4"></video>
+        <div class="home-energy-streaks" aria-hidden="true"></div>
+        <div class="guide-layout content-wrap">
+          <div class="guide-sparks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <header class="guide-heading"><span class="guide-kicker">U.A. ACADEMY • MISI ORIENTASI</span><h2 id="home-guide-title">PANDUAN <strong>MENGGUNAKAN LAMAN WEB</strong></h2><p>Kenali, terokai dan kuasai semua fungsi PLUS ULTRA MATH HEROES dengan mudah!</p></header>
+          <aside class="guide-companion" aria-label="Deku dan kemajuan panduan">
+            <figure class="home-deku-stage"><span class="home-deku-glow" aria-hidden="true"></span><img class="home-deku-floating" src="assets/deku-home-floating.png" alt="Deku membimbing langkah penggunaan laman web" width="1448" height="1086"></figure>
+            <p id="guide-deku-dialog" class="guide-dialog" role="status" aria-live="polite">Hai, Wira! Mari kenali akademi Matematik kita.</p>
+            <div class="guide-progress-card"><span class="guide-kicker">PROGRES PANDUAN</span><strong id="guide-percent">0%</strong><div id="guide-progress" class="guide-progress" role="progressbar" aria-label="Kemajuan panduan" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div><p id="guide-progress-copy">0 daripada 5 langkah selesai</p><button id="guide-restart" type="button">↻ Ulang Panduan</button><small id="guide-storage-note">Kemajuan disimpan pada peranti ini.</small></div>
+          </aside>
+          <div class="guide-workspace">
+            <div class="guide-tabs" role="tablist" aria-label="Lima langkah panduan">
+              <button id="guide-tab-0" type="button" role="tab" data-guide-step="0" aria-label="Langkah 1: Pengenalan" aria-selected="true" aria-controls="guide-panel-0" tabindex="0"><svg class="guide-deku-art" viewBox="86 12 919 870" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><image href="assets/guide-deku-pengenalan.png" width="1024" height="1024"/></svg><i aria-hidden="true"></i></button>
+              <button id="guide-tab-1" type="button" role="tab" data-guide-step="1" aria-label="Langkah 2: Navigasi Menu" aria-selected="false" aria-controls="guide-panel-1" tabindex="-1"><svg class="guide-deku-art" viewBox="0 0 1339 1174" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><image href="assets/guide-deku-navigasi.png" width="1339" height="1174"/></svg><i aria-hidden="true"></i></button>
+              <button id="guide-tab-2" type="button" role="tab" data-guide-step="2" aria-label="Langkah 3: Fungsi Utama" aria-selected="false" aria-controls="guide-panel-2" tabindex="-1"><svg class="guide-deku-art" viewBox="0 0 1324 1188" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><image href="assets/guide-deku-fungsi.png" width="1324" height="1188"/></svg><i aria-hidden="true"></i></button>
+              <button id="guide-tab-3" type="button" role="tab" data-guide-step="3" aria-label="Langkah 4: Tips Penggunaan" aria-selected="false" aria-controls="guide-panel-3" tabindex="-1"><svg class="guide-deku-art" viewBox="0 0 753 779" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><image href="assets/guide-deku-tips.png" width="753" height="779"/></svg><i aria-hidden="true"></i></button>
+              <button id="guide-tab-4" type="button" role="tab" data-guide-step="4" aria-label="Langkah 5: Misi Panduan" aria-selected="false" aria-controls="guide-panel-4" tabindex="-1"><svg class="guide-deku-art" viewBox="0 0 1310 1200" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><image href="assets/guide-deku-misi.png" width="1310" height="1200"/></svg><i aria-hidden="true"></i></button>
+            </div>
+            <article class="guide-console">
+              <div class="guide-console-bar"><span>⚡ PLUS ULTRA • PUSAT PANDUAN</span><span id="guide-step-number">01 / 05</span></div>
+              <div id="guide-panels">
+                <section id="guide-panel-0" class="guide-step-panel" role="tabpanel" aria-labelledby="guide-tab-0" tabindex="0">
+                  <span class="guide-kicker">LANGKAH 01 / PENGENALAN</span><h3>Selamat datang, Wira Matematik!</h3><p><strong>PLUS ULTRA MATH HEROES: MISI UKURAN PAHLAWAN</strong> ialah laman pembelajaran interaktif Matematik Tahun 5 untuk tajuk panjang dan penukaran unit (SP 5.1.1).</p><div class="guide-intro-grid"><div><b>Kenali hubungan unit</b><p>1 cm = 10 mm<br>1 m = 100 cm<br>1 km = 1,000 m</p></div><div><b>Belajar mengikut rentak sendiri</b><p>Baca nota, tonton video, main permainan dan uji kefahaman. Contoh melibatkan nombor perpuluhan sehingga tiga tempat perpuluhan.</p></div></div><p class="guide-tip">Tekan “Seterusnya” selepas membaca untuk menandakan langkah ini selesai.</p>
+                </section>
+                <section id="guide-panel-1" class="guide-step-panel" role="tabpanel" aria-labelledby="guide-tab-1" tabindex="0" hidden>
+                  <span class="guide-kicker">LANGKAH 02 / NAVIGASI MENU</span><h3>Enam menu, satu pengembaraan</h3><p>Gunakan menu di atas atau enam kad di bawah. Pada telefon, tekan butang Menu untuk melihat semua halaman.</p><div class="guide-menu-icons" role="group" aria-label="Kenali fungsi setiap menu"><button type="button" data-guide-menu="0" aria-pressed="true" aria-controls="guide-menu-description" style="--guide-color:#00f5bf"><b aria-hidden="true">⌂</b>Rumah</button><button type="button" data-guide-menu="1" aria-pressed="false" aria-controls="guide-menu-description" style="--guide-color:#ff942e"><b aria-hidden="true">▤</b>Nota</button><button type="button" data-guide-menu="2" aria-pressed="false" aria-controls="guide-menu-description" style="--guide-color:#35cfff"><b aria-hidden="true">▶</b>Video</button><button type="button" data-guide-menu="3" aria-pressed="false" aria-controls="guide-menu-description" style="--guide-color:#ff5d6c"><b aria-hidden="true">🎮</b>Gamifikasi</button><button type="button" data-guide-menu="4" aria-pressed="false" aria-controls="guide-menu-description" style="--guide-color:#bc81ff"><b aria-hidden="true">★</b>Kuiz</button><button type="button" data-guide-menu="5" aria-pressed="false" aria-controls="guide-menu-description" style="--guide-color:#ffd348"><b aria-hidden="true">▧</b>Sijil</button></div><p id="guide-menu-description" class="guide-tip" role="status" aria-live="polite">Rumah — Halaman utama dan panduan menggunakan laman.</p><p>Tekan ikon untuk membaca penerangan. Tekan kad watak di bawah untuk membuka halaman sebenar.</p>
+                </section>
+                <section id="guide-panel-2" class="guide-step-panel" role="tabpanel" aria-labelledby="guide-tab-2" tabindex="0" hidden>
+                  <span class="guide-kicker">LANGKAH 03 / FUNGSI UTAMA</span><h3>Laluan belajar seorang wira</h3><ol class="guide-function-list"><li><b>Nota:</b> buka misi, baca contoh dan langkah penyelesaian, kemudian cuba latihan atau simulator Bakugo.</li><li><b>Video:</b> pilih VIDEO 01–05 di bawah pemain, kemudian tekan Play dalam video.</li><li><b>Gamifikasi:</b> pilih permainan, baca arahan kawalan dan jawab cabaran penukaran unit.</li><li><b>Kuiz:</b> setiap tahap mempunyai 10 soalan. Capai minimum 6/10 untuk membuka tahap seterusnya.</li><li><b>Sijil:</b> keputusan kuiz rasmi perlu disimpan dalam akaun dan mencapai minimum 6/10 sebelum sijil boleh dijana.</li></ol><a class="guide-inline-link" href="#nota">Buka Nota &amp; Simulator Penukaran Unit →</a>
+                </section>
+                <section id="guide-panel-3" class="guide-step-panel" role="tabpanel" aria-labelledby="guide-tab-3" tabindex="0" hidden>
+                  <span class="guide-kicker">LANGKAH 04 / TIPS PENGGUNAAN</span><h3>Peralatan bantuan wira</h3><div class="guide-tools"><div><h4>✦ Guru Deku AI</h4><p>Tekan “Tanya Guru Deku”, taip soalan dan tekan Hantar. Semak fakta penting bersama guru.</p><button type="button" id="guide-open-tutor">Buka Guru Deku ↗</button></div><div><h4>♫ Muzik latar</h4><p>Gunakan butang Muzik ON/OFF. Muzik bermula selepas anda memilih untuk memainkannya.</p><button type="button" id="guide-music" aria-pressed="false">Hidupkan muzik</button></div><div><h4>⚡ Animasi panduan</h4><p>Kurangkan gerakan Deku dan panel panduan jika perlu. Tetapan pengurangan gerakan peranti turut dihormati.</p><button type="button" id="guide-motion" aria-pressed="false">Animasi panduan: ON</button></div><div><h4>⌂ Kembali ke Rumah</h4><p>Tekan menu Rumah atau pautan Kembali ke Rumah. Butang ini membawa anda ke enam kad utama.</p><a href="#rumah">Kembali ke Rumah ↑</a></div></div>
+                </section>
+                <section id="guide-panel-4" class="guide-step-panel" role="tabpanel" aria-labelledby="guide-tab-4" tabindex="0" hidden>
+                  <span class="guide-kicker">LANGKAH 05 / MISI PANDUAN</span><h3>Semak persediaan anda</h3><p>Lengkapkan empat langkah pertama, kemudian sahkan misi panduan. Tekan nama langkah untuk membacanya semula.</p><ul class="guide-checklist"><li><span data-guide-check="0" aria-hidden="true">○</span><button type="button" data-guide-review="0">Pengenalan</button><small data-guide-check-status="0">Belum selesai</small></li><li><span data-guide-check="1" aria-hidden="true">○</span><button type="button" data-guide-review="1">Navigasi Menu</button><small data-guide-check-status="1">Belum selesai</small></li><li><span data-guide-check="2" aria-hidden="true">○</span><button type="button" data-guide-review="2">Fungsi Utama</button><small data-guide-check-status="2">Belum selesai</small></li><li><span data-guide-check="3" aria-hidden="true">○</span><button type="button" data-guide-review="3">Tips Penggunaan</button><small data-guide-check-status="3">Belum selesai</small></li><li><span data-guide-check="4" aria-hidden="true">○</span><button type="button" data-guide-review="4">Misi Panduan</button><small data-guide-check-status="4">Belum selesai</small></li></ul><p id="guide-mission-message" role="status" aria-live="polite"></p><div id="guide-success" class="guide-success" hidden><strong>★ TAHNIAH, WIRA!</strong><p>Semua lima langkah selesai. Anda bersedia memulakan misi Matematik!</p></div>
+                </section>
+              </div>
+              <div class="guide-panel-controls"><button id="guide-prev" type="button">← Sebelumnya</button><span id="guide-active-label">Langkah 1 / 5</span><button id="guide-next" type="button">Seterusnya →</button></div>
+            </article>
+            <div class="guide-route-heading"><h3>KENALI ENAM MENU UTAMA</h3><p>Pilih watak untuk membuka halaman pembelajaran.</p></div>
+            <div class="guide-route-cards" aria-label="Enam kad halaman"><a class="guide-route-card home-hero-card" href="#rumah" style="--guide-color:#00ffb0;--home-card-delay:-0.0s" aria-label="Buka Rumah — Deku"><svg class="home-card-design" viewBox="0 0 367 682" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><image href="assets/home-six-hero-card-designs.png" width="2048" height="682"/></svg><span class="home-card-accessible sr-only"><span class="nav-portrait" aria-hidden="true"></span><span class="guide-card-name"><b aria-hidden="true">⌂</b> Rumah</span><strong>Deku</strong><small>Halaman utama dan panduan menggunakan laman.</small><span class="guide-card-open">Buka halaman ↗</span></span><svg class="home-card-circuit" viewBox="0 0 340 682" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect class="home-card-trail" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/><rect class="home-card-light" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/><rect class="home-card-light-tip" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/></svg></a><a class="guide-route-card home-hero-card" href="#nota" style="--guide-color:#ff432e;--home-card-delay:-0.7s" aria-label="Buka Nota — Bakugo"><svg class="home-card-design" viewBox="367 0 339 682" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><image href="assets/home-six-hero-card-designs.png" width="2048" height="682"/></svg><span class="home-card-accessible sr-only"><span class="nav-portrait" aria-hidden="true"></span><span class="guide-card-name"><b aria-hidden="true">▤</b> Nota</span><strong>Bakugo</strong><small>Baca konsep, contoh dan cuba simulator panjang.</small><span class="guide-card-open">Buka halaman ↗</span></span><svg class="home-card-circuit" viewBox="0 0 340 682" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect class="home-card-trail" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/><rect class="home-card-light" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/><rect class="home-card-light-tip" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/></svg></a><a class="guide-route-card home-hero-card" href="#video" style="--guide-color:#28cbff;--home-card-delay:-1.4s" aria-label="Buka Video — Todoroki"><svg class="home-card-design" viewBox="706 0 342 682" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><image href="assets/home-six-hero-card-designs.png" width="2048" height="682"/></svg><span class="home-card-accessible sr-only"><span class="nav-portrait" aria-hidden="true"></span><span class="guide-card-name"><b aria-hidden="true">▶</b> Video</span><strong>Todoroki</strong><small>Pilih satu daripada lima video pembelajaran.</small><span class="guide-card-open">Buka halaman ↗</span></span><svg class="home-card-circuit" viewBox="0 0 340 682" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect class="home-card-trail" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/><rect class="home-card-light" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/><rect class="home-card-light-tip" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/></svg></a><a class="guide-route-card home-hero-card" href="#gamifikasi" style="--guide-color:#ff9c1b;--home-card-delay:-2.0999999999999996s" aria-label="Buka Gamifikasi — Red Riot"><svg class="home-card-design" viewBox="1048 0 336 682" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><image href="assets/home-six-hero-card-designs.png" width="2048" height="682"/></svg><span class="home-card-accessible sr-only"><span class="nav-portrait" aria-hidden="true"></span><span class="guide-card-name"><b aria-hidden="true">🎮</b> Gamifikasi</span><strong>Red Riot</strong><small>Main Space Defender, Mask Maze dan Hero Run.</small><span class="guide-card-open">Buka halaman ↗</span></span><svg class="home-card-circuit" viewBox="0 0 340 682" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect class="home-card-trail" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/><rect class="home-card-light" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/><rect class="home-card-light-tip" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/></svg></a><a class="guide-route-card home-hero-card" href="#quiz" style="--guide-color:#cf43ff;--home-card-delay:-2.8s" aria-label="Buka Kuiz — Tokoyami"><svg class="home-card-design" viewBox="1384 0 334 682" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><image href="assets/home-six-hero-card-designs.png" width="2048" height="682"/></svg><span class="home-card-accessible sr-only"><span class="nav-portrait" aria-hidden="true"></span><span class="guide-card-name"><b aria-hidden="true">★</b> Kuiz</span><strong>Tokoyami</strong><small>Jawab Easy, Medium dan Hard: 10 soalan setiap tahap.</small><span class="guide-card-open">Buka halaman ↗</span></span><svg class="home-card-circuit" viewBox="0 0 340 682" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect class="home-card-trail" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/><rect class="home-card-light" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/><rect class="home-card-light-tip" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/></svg></a><a class="guide-route-card home-hero-card" href="#sijil" style="--guide-color:#ffda38;--home-card-delay:-3.5s" aria-label="Buka Sijil — All Might"><svg class="home-card-design" viewBox="1718 0 330 682" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><image href="assets/home-six-hero-card-designs.png" width="2048" height="682"/></svg><span class="home-card-accessible sr-only"><span class="nav-portrait" aria-hidden="true"></span><span class="guide-card-name"><b aria-hidden="true">▧</b> Sijil</span><strong>All Might</strong><small>Jana sijil selepas keputusan kuiz rasmi disimpan dan lulus.</small><span class="guide-card-open">Buka halaman ↗</span></span><svg class="home-card-circuit" viewBox="0 0 340 682" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect class="home-card-trail" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/><rect class="home-card-light" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/><rect class="home-card-light-tip" x="5" y="5" width="330" height="672" rx="20" pathLength="1000"/></svg></a></div>
+            <a class="guide-explore" href="#nota">⚡ MULA TEROKAI LAMAN WEB <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <section id="nota" class="page themed-page theme-bakugo" data-page="nota" aria-labelledby="nota-title" hidden>
+      <div class="page-hero page-hero-character note-hero content-wrap">
+        <div class="note-hero-copy"><span class="eyebrow">NOTA MATEMATIK TAHUN 5 • SP 5.1.1</span><p class="note-lab-kicker">U.A. ACADEMY / LEARNING LAB</p><h1 id="nota-title">BAKUGO <em>EXPLOSION</em><span>NOTA UNIT PANJANG</span></h1><p class="hero-slogan">Kuasai Penukaran Unit Panjang!</p><p>Fikir Pantas, Kira Tepat, Kuasai Misi! Kenal pasti arah penukaran, pilih operasi yang tepat dan kuasai perpuluhan sehingga tiga tempat perpuluhan.</p><div class="note-hero-actions"><a class="cta" href="#unit-mission">Mulakan Nota →</a><a class="secondary-button" href="#bakugo-distance-simulator">Cuba Simulator ↗</a></div><div class="note-lab-meta"><span>01 / FAHAMI UNIT</span><span>02 / KUASAI MISI</span><span>03 / CUBA SENDIRI</span></div></div>
+        <figure class="bakugo-hero"><div class="blast-ring" aria-hidden="true"></div><img src="assets/bakugo-3d-note-hero.png" alt="Bakugo 3D dalam kostum hero, besar dan tanpa latar belakang" width="1079" height="1457"></figure>
+      </div>
+      <section id="bakugo-objectives" class="content-wrap bakugo-objectives" aria-labelledby="bakugo-objectives-title">
+        <header class="bakugo-objectives-header"><div><span class="eyebrow">U.A. ACADEMY • OBJEKTIF PEMBELAJARAN</span><h2 id="bakugo-objectives-title">💥 BAKUGO'S EXPLOSIVE LEARNING MISSIONS!</h2><p>KUASAI 5 MISI PEMBELAJARAN UNTUK MENJADI WIRA MATEMATIK PLUS ULTRA!</p></div><img src="assets/bakugo-3d-note-hero.png" alt="Bakugo bersedia untuk lima misi pembelajaran" loading="lazy"></header>
+        <div class="bakugo-progress" aria-live="polite"><div><strong>BAKUGO MISSION PROGRESS — <span id="bakugo-progress-count">0/5</span></strong><span id="bakugo-progress-message">Selesaikan aktiviti untuk mengisi kuasa misi.</span></div><div class="bakugo-progress-track" role="progressbar" aria-label="Kemajuan misi Bakugo" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><span id="bakugo-progress-fill"></span></div></div>
+        <div class="bakugo-objective-grid">
+          <article class="bakugo-objective-card" data-objective="1"><img src="assets/bakugo-objective-1.png" alt="Bakugo duduk berfikir" loading="lazy"><div class="bakugo-objective-content"><span class="bakugo-mission-number">💥 MISI 01 · 📏</span><h3>BAKUGO: KENALI UNIT PANJANG</h3><p>Murid dapat mengenal pasti hubungan antara unit milimeter (mm), sentimeter (cm), meter (m) dan kilometer (km) dengan betul.</p><div class="bakugo-unit-buttons" aria-label="Pilih hubungan unit"><button type="button" data-relation="mm">mm</button><button type="button" data-relation="cm">cm</button><button type="button" data-relation="m">m</button><button type="button" data-relation="km">km</button></div><p class="bakugo-mission-output" id="bakugo-relation-output" role="status">Tekan satu simbol unit untuk melihat hubungannya.</p></div></article>
+          <article class="bakugo-objective-card" data-objective="2"><img src="assets/bakugo-objective-2.png" alt="Bakugo mengangkat tangan" loading="lazy"><div class="bakugo-objective-content"><span class="bakugo-mission-number">💥 MISI 02 · ✨</span><h3>BAKUGO: KUASAI PENUKARAN UNIT</h3><p>Murid dapat menukar unit ukuran panjang melibatkan mm, cm, m dan km serta sebaliknya, termasuk nombor perpuluhan hingga tiga tempat perpuluhan.</p><button class="bakugo-mission-button" id="bakugo-show-working" type="button" aria-expanded="false" aria-controls="bakugo-working">TUNJUKKAN PENGIRAAN</button><div class="bakugo-working" id="bakugo-working" hidden><b>Contoh: 2.006 km → m</b><ol><li>1 km = 1,000 m.</li><li>Unit besar kepada kecil: darab 1,000.</li><li>2.006 × 1,000 = <strong>2,006 m</strong>.</li></ol><b>Contoh sebaliknya:</b> 2,006 m ÷ 1,000 = 2.006 km.</div></div></article>
+          <article class="bakugo-objective-card" data-objective="3"><img src="assets/bakugo-objective-3.png" alt="Bakugo bersedia untuk cabaran" loading="lazy"><div class="bakugo-objective-content"><span class="bakugo-mission-number">💥 MISI 03 · 🎯</span><h3>BAKUGO: CABARAN KETEPATAN</h3><p>Murid dapat menjawab sekurang-kurangnya 8 daripada 10 soalan penukaran unit panjang dengan betul.</p><strong class="bakugo-target">SASARAN 8/10</strong><a class="bakugo-mission-button" href="#quiz">MULAKAN KUIZ →</a><small>Lengkap apabila keputusan rasmi Supabase mengesahkan sekurang-kurangnya 8/10.</small></div></article>
+          <article class="bakugo-objective-card" data-objective="4"><img src="assets/bakugo-objective-4.png" alt="Bakugo memikirkan penyelesaian" loading="lazy"><div class="bakugo-objective-content"><span class="bakugo-mission-number">💥 MISI 04 · 🏙️</span><h3>BAKUGO: APLIKASI MATEMATIK</h3><p>Murid dapat mengaplikasikan pengetahuan penukaran unit panjang untuk menyelesaikan masalah dalam situasi harian.</p><details class="bakugo-daily-example"><summary>Lihat masalah harian</summary><p>Jarak rumah ke sekolah ialah 1.25 km. Berapa meter jaraknya?</p><p>1.25 × 1,000 = <strong>1,250 m</strong>.</p></details><a class="bakugo-mission-button" href="#gamifikasi">MULAKAN GAMIFIKASI →</a><small>Lengkap apabila satu tahap permainan berjaya ditamatkan.</small></div></article>
+          <article class="bakugo-objective-card" data-objective="5"><img src="assets/bakugo-objective-5.png" alt="Bakugo bersemangat untuk refleksi" loading="lazy"><div class="bakugo-objective-content"><span class="bakugo-mission-number">💥 MISI 05 · 💬</span><h3>BAKUGO: REFLEKSI WIRA</h3><p>Murid dapat menilai kefahaman sendiri dengan menjawab empat soalan refleksi selepas aktiviti pembelajaran.</p><a class="bakugo-mission-button" href="#refleksi">BUAT REFLEKSI →</a><small>Lengkap apabila empat jawapan berjaya disimpan.</small></div></article>
+        </div>
+        <p class="bakugo-success" id="bakugo-success" role="status" hidden>💥 EXPLOSIVE SUCCESS! PLUS ULTRA!</p>
+      </section>
+      <div class="content-wrap section-stack">
+        <section id="bakugo-math-academy" class="bakugo-math-academy" aria-labelledby="academy-title">
+          <header class="academy-banner">
+            <div class="academy-burst" aria-hidden="true">BOOM!</div>
+            <img src="assets/bakugo-academy-hero.png" alt="Bakugo tanpa latar belakang menyambut murid ke akademi matematik" width="1088" height="1445">
+            <div class="academy-banner-copy"><span class="academy-kicker">U.A. ACADEMY • 3D INTERACTIVE LEARNING</span><h2 id="academy-title">💥 BAKUGO EXPLOSIVE<br>MATH ACADEMY</h2><p>KUASAI PENUKARAN UNIT PANJANG DENGAN KUASA MATEMATIK!</p><a class="academy-action" href="#academy-conversion-map">MULAKAN MISI <span>→</span></a></div>
+          </header>
+
+          <section id="academy-conversion-map" class="academy-module conversion-map" aria-labelledby="conversion-map-title">
+            <header><img class="conversion-guide" src="assets/bakugo-academy-map.png" alt="Bakugo tanpa latar belakang menunjukkan peta penukaran unit" loading="lazy"><div><span class="academy-label">01 • UNIT POWER MAP</span><h3 id="conversion-map-title">3D UNIT CONVERSION MAP</h3><p>Tekan anak panah untuk melihat nombor menukar unit secara visual.</p></div><button id="conversion-direction" class="academy-secondary" type="button" aria-pressed="false">↔ TUKAR ARAH</button></header>
+            <div class="conversion-track" data-direction="forward">
+              <button class="conversion-unit unit-km" type="button" data-unit="km"><b>km</b><span>Kilometer</span></button>
+              <button class="conversion-arrow" type="button" data-factor="1000" data-from="km" data-to="m"><span>× 1,000</span><i>➜</i></button>
+              <button class="conversion-unit unit-m" type="button" data-unit="m"><b>m</b><span>Meter</span></button>
+              <button class="conversion-arrow" type="button" data-factor="100" data-from="m" data-to="cm"><span>× 100</span><i>➜</i></button>
+              <button class="conversion-unit unit-cm" type="button" data-unit="cm"><b>cm</b><span>Sentimeter</span></button>
+              <button class="conversion-arrow" type="button" data-factor="10" data-from="cm" data-to="mm"><span>× 10</span><i>➜</i></button>
+              <button class="conversion-unit unit-mm" type="button" data-unit="mm"><b>mm</b><span>Milimeter</span></button>
+            </div>
+            <div id="conversion-demo" class="conversion-demo" role="status" aria-live="polite"><span class="moving-number">1</span><p><b>Pilih anak panah.</b> Unit besar → kecil menggunakan operasi darab.</p></div>
+          </section>
+
+          <section class="academy-module life-units" aria-labelledby="life-units-title"><header><div><span class="academy-label">02 • HERO WORLD SCALE</span><h3 id="life-units-title">MATEMATIK DALAM KEHIDUPAN</h3><p>Pilih unit yang sesuai berdasarkan saiz objek dan jarak.</p></div></header><div class="life-unit-grid">
+            <article><div class="life-icon">💳<span>↕</span></div><small>MILIMETER</small><h4>Ketebalan objek kecil</h4><p>Kad, syiling dan skru diukur dengan tepat dalam mm.</p><strong>85 mm = 8.5 cm</strong></article>
+            <article><div class="life-icon">📏<span>✏️</span></div><small>SENTIMETER</small><h4>Pembaris &amp; pensel</h4><p>Panjang objek di atas meja biasanya mudah dibaca dalam cm.</p><strong>120 cm = 1.2 m</strong></article>
+            <article><div class="life-icon">🚪<span>↕</span></div><small>METER</small><h4>Tinggi pintu</h4><p>Ukuran bilik dan objek bersaiz sederhana sesuai dalam m.</p><strong>3.4 m = 340 cm</strong></article>
+            <article><div class="life-icon">🛣️<span>🚗</span></div><small>KILOMETER</small><h4>Jarak perjalanan</h4><p>Jarak yang jauh antara tempat biasanya ditulis dalam km.</p><strong>2.5 km = 2,500 m</strong></article>
+          </div></section>
+
+          <section class="academy-module academy-lab" aria-labelledby="academy-lab-title"><img src="assets/bakugo-academy-lab.png" alt="Bakugo tanpa latar belakang membantu eksperimen penukaran unit" loading="lazy"><div class="lab-console"><span class="academy-label">03 • EXPLOSIVE CONVERSION LAB</span><h3 id="academy-lab-title">MISI: TUKARKAN 3.45 m KEPADA cm</h3><div class="lab-meter"><span id="lab-progress-fill"></span></div><ol id="lab-steps"><li class="is-active"><b>1</b><span>Unit asal ialah <strong>m</strong>; unit sasaran ialah <strong>cm</strong>.</span></li><li><b>2</b><span>m → cm ialah unit besar kepada kecil. Pilih <strong>×100</strong>.</span></li><li><b>3</b><span>Pengiraan: <strong>3.45 × 100</strong>.</span></li><li><b>4</b><span>Jawapan: <strong>345 cm</strong>. PLUS ULTRA! BETUL!</span></li></ol><div class="lab-actions"><button id="lab-next" class="academy-action" type="button">LANGKAH SETERUSNYA</button><button id="lab-replay" class="academy-secondary" type="button">↻ ULANG ANIMASI</button><button id="lab-try" class="academy-secondary" type="button">CUBA SENDIRI</button></div><p id="lab-feedback" role="status" aria-live="polite">Bakugo: Kenal pasti unit dahulu. Jangan tergesa-gesa!</p></div></section>
+
+          <section class="academy-module decimal-lab" aria-labelledby="decimal-title"><div class="decimal-copy"><span class="academy-label">04 • DECIMAL POWER SHIFT</span><h3 id="decimal-title">VISUAL NILAI TEMPAT</h3><p>Darab 10 mengalihkan setiap digit satu nilai tempat ke kiri; bahagi 10 mengalihkannya satu nilai tempat ke kanan. Nilai digit berubah kerana tempatnya berubah.</p><div id="decimal-equation" class="decimal-equation" aria-live="polite"><strong id="decimal-value">2.375</strong><span>× 1,000</span><strong id="decimal-result">2,375</strong></div><div class="decimal-digits" id="decimal-digits" aria-label="Digit nilai perpuluhan"><i>2</i><i>.</i><i>3</i><i>7</i><i>5</i></div><div class="decimal-controls" aria-label="Pilih operasi"><button type="button" data-operation="10">×10</button><button type="button" data-operation="100">×100</button><button type="button" data-operation="1000" class="is-active">×1000</button><button type="button" data-operation="0.1">÷10</button><button type="button" data-operation="0.01">÷100</button><button type="button" data-operation="0.001">÷1000</button></div><p id="decimal-explain"><b>2.375 km × 1,000 = 2,375 m.</b> Setiap digit kini bernilai 1,000 kali lebih besar.</p></div><img src="assets/bakugo-academy-decimal.png" alt="Bakugo tanpa latar belakang menerangkan nilai tempat perpuluhan" loading="lazy"></section>
+
+          <section class="academy-module mini-challenge" aria-labelledby="mini-challenge-title"><img src="assets/bakugo-academy-challenge.png" alt="Bakugo tanpa latar belakang memberi cabaran matematik" loading="lazy"><div class="challenge-console"><span class="academy-label">05 • BAKUGO MINI CHALLENGE</span><h3 id="mini-challenge-title">TIGA LETUPAN PANTAS!</h3><p>Latihan pembelajaran sahaja—tidak mengubah markah Kuiz rasmi.</p><div id="academy-question" class="academy-question"><small>SOALAN <span id="academy-question-number">1</span>/3</small><strong id="academy-question-text">4.5 m = ? cm</strong><div id="academy-options" class="academy-options"></div><p id="academy-challenge-feedback" role="status" aria-live="polite">Pilih jawapan terbaik.</p></div><div class="challenge-progress"><span id="challenge-progress-fill"></span></div></div></section>
+        </section>
+        <header class="note-section-heading"><div><span class="eyebrow">01 / UNIT POWER REACTOR</span><h2>HUBUNGAN UNIT PANJANG</h2></div><p>Empat unit. Tiga hubungan. Satu kuasa pengiraan.</p></header>
+        <div id="unit-mission" class="unit-ladder" aria-label="Tangga unit panjang">
+          <button class="unit-card" type="button" data-unit="km" aria-expanded="false"><strong>km</strong><span>Kilometer</span></button><i>× 1,000 →<br>← ÷ 1,000</i>
+          <button class="unit-card" type="button" data-unit="m" aria-expanded="false"><strong>m</strong><span>Meter</span></button><i>× 100 →<br>← ÷ 100</i>
+          <button class="unit-card" type="button" data-unit="cm" aria-expanded="false"><strong>cm</strong><span>Sentimeter</span></button><i>× 10 →<br>← ÷ 10</i>
+          <button class="unit-card" type="button" data-unit="mm" aria-expanded="false"><strong>mm</strong><span>Milimeter</span></button>
+        </div>
+        <div id="unit-info" class="unit-info" role="status" aria-live="polite">Tekan mana-mana kad unit untuk melihat maklumat dan contoh penggunaannya.</div>
+
+        <div class="callout"><strong>Peraturan wira:</strong> Tukar daripada unit besar kepada unit kecil dengan <b>mendarab</b>. Tukar daripada unit kecil kepada unit besar dengan <b>membahagi</b>.</div>
+
+        <header class="note-section-heading"><div><span class="eyebrow">02 / EXPLOSION MISSION CARDS</span><h2>Pilih misi pembelajaran</h2></div><p>Buka nota, ikuti langkah dan cuba latihan.</p></header>
+        <div class="lesson-grid note-missions">
+          <article class="lesson-card" data-example="1"><span>01</span><h2>mm ↔ cm</h2><p><b>1 cm = 10 mm</b></p><div class="working"><em>Contoh: 48.5 cm → mm</em><ol class="solution-steps"><li>Unit cm lebih besar daripada mm.</li><li>Unit besar → kecil: darab 10.</li><li>48.5 × 10 = <strong>485 mm</strong></li></ol></div><div class="lesson-actions"><button class="reveal-step" type="button">Tunjukkan Langkah</button><button class="try-practice" type="button">Cuba Sendiri</button></div></article>
+          <article class="lesson-card" data-example="2"><span>02</span><h2>cm ↔ m</h2><p><b>1 m = 100 cm</b></p><div class="working"><em>Contoh: 325 cm → m</em><ol class="solution-steps"><li>Unit cm lebih kecil daripada m.</li><li>Unit kecil → besar: bahagi 100.</li><li>325 ÷ 100 = <strong>3.25 m</strong></li></ol></div><div class="lesson-actions"><button class="reveal-step" type="button">Tunjukkan Langkah</button><button class="try-practice" type="button">Cuba Sendiri</button></div></article>
+          <article class="lesson-card" data-example="3"><span>03</span><h2>m ↔ km</h2><p><b>1 km = 1,000 m</b></p><div class="working"><em>Contoh: 2.006 km → m</em><ol class="solution-steps"><li>Unit km lebih besar daripada m.</li><li>Unit besar → kecil: darab 1,000.</li><li>2.006 × 1,000 = <strong>2,006 m</strong></li></ol></div><div class="lesson-actions"><button class="reveal-step" type="button">Tunjukkan Langkah</button><button class="try-practice" type="button">Cuba Sendiri</button></div></article>
+        </div>
+
+        <article class="practice-panel arena-math-lab" id="mini-practice">
+          <img src="assets/bakugo-arena-chef.png" alt="Bakugo tanpa latar belakang mengetuai makmal matematik" loading="lazy">
+          <div class="arena-lab-workspace"><span class="arena-chip">INTERACTIVE MATH LAB</span><h2>Latihan Mini Bakugo</h2><p class="arena-lab-question">7.2 m <b>→</b> ? cm</p><div class="arena-ruler" aria-label="Visual pembaris 7.2 meter didarab seratus"><span>0</span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><strong>7.2 m</strong></div><div class="arena-conversion-arrow"><span>m</span><b>× 100</b><span>cm</span></div>
+          <form id="note-practice-form"><label for="note-answer">PANEL JAWAPAN DIGITAL</label><div class="practice-input"><input id="note-answer" type="number" step="any" inputmode="decimal" required placeholder="Masukkan nombor"><span>cm</span></div><div class="practice-actions"><button class="cta" type="submit">SEMAK JAWAPAN</button><button id="note-hint" class="secondary-button" type="button">💥 PETUNJUK BAKUGO</button><button id="note-show-steps" class="secondary-button" type="button">LIHAT LANGKAH</button><button id="note-retry" class="secondary-button" type="button">↻ CUBA LAGI</button></div><p id="note-working" class="arena-working" hidden>7.2 m × 100 = <strong>720 cm</strong></p><p id="note-feedback" class="feedback" role="status" aria-live="polite">Masukkan jawapan untuk mengaktifkan makmal.</p></form></div>
+        </article>
+
+        <article class="step-panel" aria-label="Tiga langkah penukaran unit">
+          <details class="step-card"><summary><span class="step-num">1</span><h3>Kenal pasti arah</h3><p>Adakah unit sasaran lebih kecil atau lebih besar?</p><span class="step-invite">Lihat contoh <span aria-hidden="true">＋</span></span></summary><p class="step-example">Contoh: daripada meter kepada sentimeter, unit sasaran lebih kecil.</p></details>
+          <details class="step-card"><summary><span class="step-num">2</span><h3>Pilih operasi</h3><p>Unit lebih kecil: darab. Unit lebih besar: bahagi.</p><span class="step-invite">Lihat contoh <span aria-hidden="true">＋</span></span></summary><p class="step-example">Contoh: 1 m × 100 = 100 cm. Untuk kembali kepada meter, bahagi dengan 100.</p></details>
+          <details class="step-card"><summary><span class="step-num">3</span><h3>Semak jawapan</h3><p>Jawapan dalam unit kecil sepatutnya mempunyai nilai nombor lebih besar.</p><span class="step-invite">Lihat contoh <span aria-hidden="true">＋</span></span></summary><p class="step-example">Contoh: 100 cm = 1 m; nombor 100 lebih besar apabila unitnya lebih kecil.</p></details>
+        </article>
+
+        <article class="daily-problem arena-story-track">
+          <div class="arena-track-copy"><span class="arena-chip">VISUAL STORY CHALLENGE</span><h2>Latihan Trek Wira</h2><p>Deku berlari 1.25 km pada waktu pagi dan 750 m pada waktu petang. Berapakah jumlah jarak dalam meter?</p><button id="track-solution" class="cta" type="button">LIHAT PENYELESAIAN</button></div>
+          <div class="arena-track-visual"><img src="assets/bakugo-arena-banner.png" alt="Bakugo tanpa latar belakang berada di trek latihan" loading="lazy"><div class="track-road"><span class="track-marker first">PAGI<br><b>1.25 km</b></span><i></i><span class="track-marker second">PETANG<br><b>750 m</b></span><i></i><span class="track-finish">🏁 ? m</span></div><ol id="track-steps"><li>1.25 km = <strong>1,250 m</strong></li><li>1,250 m + 750 m</li><li>Jumlah = <strong>2,000 m</strong></li></ol></div>
+        </article>
+
+        <section id="bakugo-distance-simulator" class="bakugo-distance-simulator" aria-labelledby="distance-simulator-title">
+          <header class="distance-simulator-header">
+            <div><span class="eyebrow">MISI BAKUGO: PERJALANAN KE SEKOLAH • SERET &amp; TUKAR UNIT</span><h2 id="distance-simulator-title">MISI BAKUGO: SEJAUH MANA SEKOLAH ITU?</h2><p>Gerakkan Bakugo di sepanjang trek. Semakin hampir ke sekolah, semakin kecil jaraknya.</p></div>
+            <div class="simulator-scale"><strong>SKALA SIMULASI</strong><span>0 hingga 1,000 m</span><small>Bukan ukuran sebenar pada skrin</small></div>
+          </header>
+
+          <div id="distance-lane" class="distance-lane" aria-describedby="distance-scale-note">
+            <div class="track-energy" aria-hidden="true"></div>
+            <div class="hero-road" aria-hidden="true"><span></span></div>
+            <button id="bakugo-runner" class="bakugo-runner" type="button" aria-label="Seret Bakugo ke kiri atau kanan" aria-describedby="distance-scale-note">
+              <img src="assets/bakugo-sit-cutout.png" alt="Bakugo sebagai watak yang boleh digerakkan" width="1024" height="1536" draggable="false" loading="lazy">
+              <span class="runner-label">SERET SAYA!</span>
+            </button>
+            <figure class="school-destination">
+              <img src="assets/bakugo-school.jpeg" alt="Sekolah sebagai destinasi tetap" width="420" height="335">
+              <figcaption>SEKOLAH</figcaption>
+            </figure>
+          </div>
+
+          <div class="distance-controls" aria-label="Kawalan pergerakan Bakugo">
+            <button id="bakugo-away" class="secondary-button" type="button">← Jauhi Sekolah</button>
+            <label for="bakugo-position">Kedudukan Bakugo
+              <input id="bakugo-position" type="range" min="0" max="100" step="1" value="25">
+            </label>
+            <button id="bakugo-closer" class="cta" type="button">Dekati Sekolah →</button>
+            <button id="bakugo-reset-position" class="secondary-button" type="button">↻ Tetapkan Semula</button>
+          </div>
+
+          <div class="distance-readouts" aria-label="Jarak langsung dalam empat unit" aria-live="polite">
+            <div><small>KILOMETER</small><strong id="distance-km">0.75</strong><span>km</span></div>
+            <div><small>METER</small><strong id="distance-m">750</strong><span>m</span></div>
+            <div><small>SENTIMETER</small><strong id="distance-cm">75,000</strong><span>cm</span></div>
+            <div><small>MILIMETER</small><strong id="distance-mm">750,000</strong><span>mm</span></div>
+          </div>
+          <p id="distance-scale-note" class="distance-scale-note"><strong>Nota skala:</strong> Kedudukan Bakugo hanya mewakili simulasi jarak maksimum 1,000 m. Piksel pada skrin bukan meter sebenar.</p>
+
+          <article class="distance-mission-panel">
+            <div class="distance-mission-copy"><span id="distance-mission-badge">MISI PENUKARAN 1 / 4</span><h3 id="distance-question">Bakugo berada 750 m dari sekolah. Tukarkan jarak itu kepada km.</h3><p id="distance-hint">Gerakkan Bakugo untuk menghasilkan nilai soalan yang baharu.</p></div>
+            <form id="distance-mission-form" class="distance-answer-form">
+              <label for="distance-answer">Jawapan anda</label>
+              <div><input id="distance-answer" type="number" step="any" inputmode="decimal" autocomplete="off" required><span id="distance-answer-unit">km</span><button type="submit">Semak Jawapan</button></div>
+            </form>
+            <div class="distance-mission-actions">
+              <button id="distance-show-steps" class="secondary-button" type="button" hidden>Tunjuk Langkah</button>
+              <button id="distance-next-mission" class="secondary-button" type="button">Misi Baharu →</button>
+              <button id="distance-reset-mission" class="secondary-button" type="button">↻ Mula Semula Misi</button>
+            </div>
+            <p id="distance-feedback" class="feedback" role="status" aria-live="polite">Masukkan jawapan apabila anda sudah bersedia.</p>
+            <ol id="distance-solution-steps" class="distance-solution-steps" hidden></ol>
+          </article>
+        </section>
+
+        <div class="page-actions"><a class="back-home" href="#rumah">← Kembali ke Rumah</a><a class="cta" href="#video">Seterusnya: Video →</a></div>
+      </div>
+    </section>
+
+    <section id="video" class="page themed-page theme-todoroki" data-page="video" aria-labelledby="video-title" hidden>
+      <div class="video-atmosphere" aria-hidden="true"><span class="video-ice-aura"></span><span class="video-fire-aura"></span>
+        <i style="--x:5%;--delay:-2s;--duration:17s"></i><i style="--x:18%;--delay:-9s;--duration:21s"></i><i style="--x:31%;--delay:-5s;--duration:19s"></i><i style="--x:47%;--delay:-14s;--duration:24s"></i><i style="--x:63%;--delay:-7s;--duration:22s"></i><i style="--x:78%;--delay:-12s;--duration:18s"></i><i style="--x:90%;--delay:-4s;--duration:23s"></i>
+      </div>
+      <div class="content-wrap video-academy-layout">
+        <header class="video-academy-heading">
+          <span class="video-academy-label">TODOROKI • U.A. LEARNING THEATRE</span>
+          <h1 id="video-title">VIDEO <em>INTERAKTIF</em></h1>
+          <p>TONTON <b>›</b> FAHAMI <b>›</b> PRAKTIK <b>›</b> KUASAI</p>
+        </header>
+        <div class="video-workspace">
+          <div class="video-benefits" aria-label="Manfaat video"><span>✓ Penerangan konsep</span><span>✓ Contoh pengiraan</span><span>✓ Kukuhkan kefahaman</span></div>
+          <article class="video-console" aria-labelledby="video-active-title">
+            <div class="ua-frame-effects" aria-hidden="true">
+              <svg class="ua-static-ice" viewBox="0 0 100 200" focusable="false"><defs><linearGradient id="ua-static-ice-shade"><stop stop-color="#e6ffff"/><stop offset=".45" stop-color="#30c3ff"/><stop offset=".5" stop-color="#c2f7ff"/><stop offset="1" stop-color="#0863b4"/></linearGradient></defs><g fill="url(#ua-static-ice-shade)" stroke="#bcf9ff" stroke-width="1.2"><path d="M40 190 15 85 30 20 55 67 53 145Z"/><path d="M51 190 46 60 70 0 91 58 76 154Z"/><path d="M32 190 0 142 5 102 34 128 45 175Z"/><path d="M61 190 71 115 92 75 100 130 84 177Z"/></g><g fill="none" stroke="#edffff" opacity=".8"><path d="m30 20 4 103 6 67M70 0l-7 109-12 81M5 102l20 57M92 75l-8 74"/></g></svg>
+              <svg class="ua-static-fire" viewBox="0 0 100 200" focusable="false"><defs><linearGradient id="ua-static-fire-shade" x2="0" y2="1"><stop stop-color="#ff3d16"/><stop offset=".6" stop-color="#ff8a24"/><stop offset="1" stop-color="#ffe478"/></linearGradient></defs><path fill="url(#ua-static-fire-shade)" d="M20 195C-13 160 11 130 21 103c-2 31 17 23 15 0C30 75 55 46 59 0c25 37-6 64 13 83 1-15 13-22 17-35 15 39-15 53-1 80 12 20 17 43-2 67Z"/><path fill="#ffd76a" d="M35 195c-23-26 3-44 2-66 13 16 14 27 21 10 10-24-6-30 7-49 1 35 26 38 15 66 9 13 9 28-3 39Z"/><path fill="#fff3b6" d="M49 195c-12-16 8-26 6-42 14 18 23 25 13 42Z"/></svg>
+              <svg class="ua-dual-neon" viewBox="0 0 800 600" preserveAspectRatio="none" focusable="false">
+                <rect class="ua-dual-red ua-dual-trail" x="8" y="8" width="784" height="584" rx="20" pathLength="1000"/>
+                <rect class="ua-dual-blue ua-dual-trail" x="8" y="8" width="784" height="584" rx="20" pathLength="1000"/>
+                <rect class="ua-dual-red ua-dual-head" x="8" y="8" width="784" height="584" rx="20" pathLength="1000"/>
+                <rect class="ua-dual-blue ua-dual-head" x="8" y="8" width="784" height="584" rx="20" pathLength="1000"/>
+                <rect class="ua-dual-meeting" x="8" y="8" width="784" height="584" rx="20" pathLength="1000"/>
+              </svg>
+            </div>
+            <div class="video-console-bar"><svg class="ua-player-emblem" viewBox="737 0 196 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><image href="assets/ua-player-dual-neon-reference.png" width="1672" height="941"/></svg><span class="ua-player-heading">U.A. VIDEO PLAYER<small>PLUS ULTRA EDUCATION</small></span><span id="video-selected-count">01 / 05</span></div>
+            <div id="video-main-stage" class="video-main-stage" aria-labelledby="video-active-title"></div>
+            <div class="video-now-playing">
+              <div><span id="video-active-kind" class="eyebrow"></span><h2 id="video-active-title">Lagu Matematik: Penukaran Unit</h2></div>
+              <button id="video-fullscreen" type="button" class="video-fullscreen" aria-label="Paparkan pemain video skrin penuh">⛶ <span>Skrin penuh</span></button>
+            </div>
+            <p id="video-active-description" class="video-description"></p>
+            <div class="video-source-row"><p class="video-credit">Oleh <strong id="video-active-credit"></strong></p><a id="video-active-source" class="video-link" target="_blank" rel="noopener noreferrer">Buka di Canva ↗</a></div>
+            <p id="video-player-help" class="video-player-help" role="status">Tekan Play dalam video. Gunakan kawalan pemain untuk jeda, bunyi dan garis masa.</p>
+          </article>
+          <div id="video-selector" class="video-selector" role="group" aria-label="Pilih satu daripada lima video"></div>
+          <div class="media-actions"><a class="secondary-button" href="#nota">← Kembali ke Nota</a><button id="next-video" class="cta" type="button">Video Seterusnya →</button></div>
+        </div>
+        <div class="video-character-space" aria-hidden="true"><span>DUA KUASA.<br><strong>SATU MISI.</strong></span></div>
+        <div class="page-actions"><a class="back-home" href="#rumah">← Kembali ke Rumah</a><a class="cta" href="#gamifikasi">Seterusnya: Gamifikasi →</a></div>
+      </div>
+    </section>
+
+    <section id="gamifikasi" class="page themed-page theme-riot" data-page="gamifikasi" aria-labelledby="game-title" hidden>
+      <div class="page-hero page-hero-character content-wrap">
+        <div><span class="eyebrow">RED RIOT • ARENA LATIHAN</span><h1 id="game-title">Cabaran Unit PLUS ULTRA</h1><p>Jawab dengan tepat, kumpulkan mata dan naik tahap. Anda mempunyai tiga nyawa.</p></div>
+        <div class="page-character floating-hero-cutout"><img src="assets/red-riot-floating-cutout.png" alt="Red Riot" width="1199" height="1312"></div>
+      </div>
+      <section id="space-defender" class="content-wrap space-defender" aria-labelledby="space-defender-title" data-space-state="idle">
+        <header class="space-defender-header">
+          <div>
+            <span class="space-kicker">ARCADE MATEMATIK • MISI ANGKASA</span>
+            <h2 id="space-defender-title">PLUS ULTRA<br><strong>SPACE DEFENDER</strong></h2>
+            <p><em>“Convert Units. Defeat Enemies. Go Beyond PLUS ULTRA!”</em></p>
+          </div>
+          <div class="space-rules">
+            <b>KUASA PENUKARAN</b>
+            <span>1 cm = 10 mm</span><span>1 m = 100 cm</span><span>1 km = 1,000 m</span>
+          </div>
+        </header>
+
+        <div class="space-arcade-shell">
+          <div class="space-hud" aria-label="Statistik PLUS ULTRA SPACE DEFENDER">
+            <div><small>SKOR</small><strong id="space-score">0</strong></div>
+            <div><small>TAHAP</small><strong id="space-level">1</strong></div>
+            <div><small>NYAWA</small><strong id="space-lives" aria-label="3 nyawa">♥ ♥ ♥</strong></div>
+            <div><small>STATUS</small><strong id="space-status">SEDIA</strong></div>
+          </div>
+
+          <div class="space-stage">
+            <canvas id="space-canvas" width="900" height="520" aria-label="Arena permainan angkasa. Gerakkan kapal ke kiri atau kanan dan tembak musuh." role="img"></canvas>
+            <div id="space-start-overlay" class="space-overlay">
+              <div class="space-overlay-card">
+                <span class="space-overlay-badge">MISI WIRA ANGKASA</span>
+                <h3>PERTAHANKAN GALAKSI!</h3>
+                <p>Tewaskan dron musuh. Apabila amaran Matematik muncul, jawab dengan tepat untuk membuka <strong>Triple Laser</strong>.</p>
+                <div class="space-control-guide">
+                  <span><b>← → / A D</b> Bergerak</span>
+                  <span><b>SPACE</b> Menembak</span>
+                  <span><b>ESC</b> Jeda</span>
+                </div>
+                <button id="space-start" class="space-primary" type="button">START GAME</button>
+              </div>
+            </div>
+
+            <div id="space-pause-overlay" class="space-overlay" hidden>
+              <div class="space-overlay-card compact"><span class="space-overlay-badge">MISI DIJEDA</span><h3>PAUSE</h3><p>Tarik nafas, Wira. Galaksi menunggu kamu.</p><button id="space-resume-overlay" class="space-primary" type="button">RESUME</button></div>
+            </div>
+
+            <div id="space-gameover-overlay" class="space-overlay" hidden>
+              <div class="space-overlay-card compact"><span class="space-overlay-badge danger">SEMUA NYAWA HABIS</span><h3>GAME OVER</h3><p id="space-final-score">Skor akhir: 0</p><button id="space-play-again" class="space-primary" type="button">PLAY AGAIN</button></div>
+            </div>
+
+            <section id="space-math-overlay" class="space-overlay space-math-overlay" aria-labelledby="space-math-question" hidden>
+              <div class="space-math-card">
+                <span id="space-math-badge">MATH POWER-UP</span>
+                <h3 id="space-math-question">48.5 cm = ? mm</h3>
+                <p>Pilih satu jawapan untuk menyambung misi.</p>
+                <div id="space-math-options" class="space-math-options" aria-label="Empat pilihan jawapan"></div>
+                <div id="space-math-feedback" class="space-math-feedback" role="status" aria-live="polite"></div>
+                <button id="space-math-continue" class="space-primary" type="button" hidden>CONTINUE MISSION</button>
+              </div>
+            </section>
+          </div>
+
+          <div class="space-command-bar" aria-label="Kawalan permainan">
+            <button id="space-pause" class="space-command" type="button" disabled>PAUSE</button>
+            <button id="space-resume" class="space-command" type="button" hidden>RESUME</button>
+            <span id="space-power-indicator" aria-live="polite">POWER: NORMAL</span>
+          </div>
+
+          <div class="space-touch-controls" aria-label="Kawalan sentuhan">
+            <button id="space-touch-left" type="button" aria-label="Gerak ke kiri">◀</button>
+            <button id="space-touch-fire" class="fire" type="button" aria-label="Tembak laser">LASER</button>
+            <button id="space-touch-right" type="button" aria-label="Gerak ke kanan">▶</button>
+          </div>
+          <p id="space-live-status" class="sr-only" role="status" aria-live="polite">Permainan belum dimulakan.</p>
+          <p class="space-mobile-note">Komputer: gunakan ← → atau A/D dan SPACE. Telefon/tablet: tahan butang arah dan LASER.</p>
+        </div>
+      </section>
+
+      <section id="mask-maze" class="content-wrap mask-maze" aria-labelledby="mask-maze-title" data-maze-state="idle" data-player-x="1" data-player-y="13">
+        <header class="mask-maze-header">
+          <div>
+            <span class="maze-kicker">PIXEL ARCADE • CABARAN UNIT</span>
+            <h2 id="mask-maze-title">PLUS ULTRA<br><strong>MASK MAZE</strong></h2>
+            <p>Meluncur hingga dinding, kutip semua syiling dan kuasai penukaran unit!</p>
+          </div>
+          <div class="maze-rules" aria-label="Peraturan penukaran unit">
+            <b>KOD KUASA</b>
+            <span>cm → mm ×10</span><span>m → cm ×100</span><span>km → m ×1,000</span>
+          </div>
+        </header>
+
+        <div class="maze-mode-picker" aria-label="Pilih mod permainan">
+          <button id="maze-stage-mode" class="maze-mode active" type="button" aria-pressed="true"><b>STAGE MODE</b><small>3 maze dan tahap meningkat</small></button>
+          <button id="maze-endless-mode" class="maze-mode" type="button" aria-pressed="false"><b>ENDLESS ARCADE</b><small>Daki tanpa henti, elak Void</small></button>
+        </div>
+
+        <div class="maze-arcade-shell">
+          <div class="maze-hud" aria-label="Statistik PLUS ULTRA MASK MAZE">
+            <div><small>SKOR</small><strong id="maze-score">0</strong></div>
+            <div><small>TAHAP</small><strong id="maze-level">1</strong></div>
+            <div><small>SYILING</small><strong id="maze-coins">0 / 0</strong></div>
+            <div><small>NYAWA</small><strong id="maze-lives" aria-label="3 nyawa">♥ ♥ ♥</strong></div>
+            <div><small>REKOD</small><strong id="maze-high-score">0</strong></div>
+          </div>
+
+          <div id="maze-stage" class="maze-stage">
+            <canvas id="maze-canvas" width="720" height="720" role="img" aria-label="Maze neon. Gerakkan wira bertopeng sehingga dinding, kutip syiling dan cari pintu keluar."></canvas>
+
+            <div id="maze-start-overlay" class="maze-overlay">
+              <div class="maze-overlay-card">
+                <span class="maze-overlay-badge">MISI WIRA BERTOPENG</span>
+                <h3>LUNCUR. KUTIP. KIRA!</h3>
+                <p>Satu arahan menggerakkan wira terus sehingga dinding. Kutip semua syiling, elak duri, laser dan musuh, kemudian masuk ke portal.</p>
+                <div class="maze-control-guide"><span><b>↑ ↓ ← → / WASD</b> Bergerak</span><span><b>SWIPE</b> Telefon & tablet</span><span><b>ESC</b> Jeda</span></div>
+                <button id="maze-start" class="maze-primary" type="button">START GAME</button>
+              </div>
+            </div>
+
+            <div id="maze-pause-overlay" class="maze-overlay" hidden>
+              <div class="maze-overlay-card compact"><span class="maze-overlay-badge">MISI DIJEDA</span><h3>PAUSE</h3><p>Rancang laluan seterusnya, Wira.</p><button id="maze-resume-overlay" class="maze-primary" type="button">RESUME</button></div>
+            </div>
+
+            <div id="maze-gameover-overlay" class="maze-overlay" hidden>
+              <div class="maze-overlay-card compact"><span class="maze-overlay-badge danger">VOID MENANGKAP WIRA</span><h3>GAME OVER</h3><p id="maze-final-score">Skor akhir: 0</p><button id="maze-play-again" class="maze-primary" type="button">PLAY AGAIN</button></div>
+            </div>
+
+            <div id="maze-complete-overlay" class="maze-overlay" hidden>
+              <div class="maze-overlay-card compact"><span class="maze-overlay-badge success">PORTAL DIBUKA</span><h3>LEVEL COMPLETE!</h3><p id="maze-complete-copy">Tahap selesai.</p><button id="maze-next-level" class="maze-primary" type="button">TAHAP SETERUSNYA</button></div>
+            </div>
+
+            <section id="maze-math-overlay" class="maze-overlay maze-math-overlay" aria-labelledby="maze-math-question" hidden>
+              <div class="maze-math-card">
+                <span id="maze-math-badge">UNIT POWER GATE</span>
+                <h3 id="maze-math-question">48.5 cm = ? mm</h3>
+                <p>Pilih jawapan untuk membuka laluan tenaga.</p>
+                <div id="maze-math-options" class="maze-math-options" aria-label="Empat pilihan jawapan"></div>
+                <div id="maze-math-feedback" class="maze-math-feedback" role="status" aria-live="polite"></div>
+                <button id="maze-math-continue" class="maze-primary" type="button" hidden>SAMBUNG MISI</button>
+              </div>
+            </section>
+          </div>
+
+          <div class="maze-command-bar" aria-label="Kawalan permainan Mask Maze">
+            <button id="maze-pause" class="maze-command" type="button" disabled>PAUSE</button>
+            <button id="maze-resume" class="maze-command" type="button" hidden>RESUME</button>
+            <button id="maze-restart" class="maze-command" type="button">RESTART</button>
+            <span id="maze-status">SEDIA</span>
+          </div>
+
+          <div class="maze-touch-controls" aria-label="Butang arah Mask Maze">
+            <span></span><button type="button" data-maze-direction="up" aria-label="Gerak ke atas">▲</button><span></span>
+            <button type="button" data-maze-direction="left" aria-label="Gerak ke kiri">◀</button><button type="button" data-maze-direction="down" aria-label="Gerak ke bawah">▼</button><button type="button" data-maze-direction="right" aria-label="Gerak ke kanan">▶</button>
+          </div>
+          <p id="maze-live-status" class="sr-only" role="status" aria-live="polite">Permainan belum dimulakan.</p>
+          <p class="maze-mobile-note">Wira akan bergerak sehingga dinding. Swipe pada maze atau gunakan butang arah. Kutip semua syiling sebelum masuk ke portal.</p>
+        </div>
+      </section>
+
+      <section id="hero-run" class="content-wrap hero-run" aria-labelledby="hero-run-title" data-run-state="idle" data-run-distance="0" data-run-jumps="0">
+        <header class="hero-run-header">
+          <div>
+            <span class="run-kicker">AUTO-RUN ARCADE • MISI KELAJUAN</span>
+            <h2 id="hero-run-title">PLUS ULTRA<br><strong>HERO RUN</strong></h2>
+            <p>Berlari automatik, lompat melepasi bahaya dan aktifkan Unit Power!</p>
+          </div>
+          <div class="run-rules" aria-label="Kod penukaran unit Hero Run">
+            <b>UNIT BOOST</b>
+            <span>1 cm = 10 mm</span><span>1 m = 100 cm</span><span>1 km = 1,000 m</span>
+          </div>
+        </header>
+
+        <div class="run-arcade-shell">
+          <div class="run-hud" aria-label="Statistik PLUS ULTRA HERO RUN">
+            <div><small>SKOR</small><strong id="run-score">0</strong></div>
+            <div><small>TAHAP</small><strong id="run-level">1</strong></div>
+            <div><small>SYILING</small><strong id="run-coins">0</strong></div>
+            <div><small>NYAWA</small><strong id="run-lives" aria-label="3 nyawa">♥ ♥ ♥</strong></div>
+            <div><small>JARAK</small><strong id="run-distance">0 m</strong></div>
+            <div><small>REKOD</small><strong id="run-high-score">0</strong></div>
+          </div>
+
+          <div class="run-progress" aria-label="Kemajuan tahap"><span id="run-progress-bar"></span></div>
+
+          <div id="run-stage" class="run-stage">
+            <canvas id="run-canvas" width="960" height="520" role="img" aria-label="Arena platformer. Wira berlari secara automatik; tekan untuk melompat."></canvas>
+
+            <div id="run-start-overlay" class="run-overlay">
+              <div class="run-overlay-card">
+                <span class="run-overlay-badge">MISI AUTO-RUN</span>
+                <h3>LOMPAT. KUTIP. PLUS ULTRA!</h3>
+                <p>Wira berlari sendiri. Tekan atau tahan untuk melompat lebih tinggi, elak jurang dan musuh, serta kutip kristal Matematik.</p>
+                <div class="run-control-guide"><span><b>SPACE / ↑</b> Lompat</span><span><b>KLIK / KETIK</b> Lompat sentuh</span><span><b>TAHAN</b> Lompat lebih tinggi</span></div>
+                <button id="run-start" class="run-primary" type="button">START GAME</button>
+              </div>
+            </div>
+
+            <div id="run-pause-overlay" class="run-overlay" hidden>
+              <div class="run-overlay-card compact"><span class="run-overlay-badge">LARIAN DIJEDA</span><h3>PAUSE</h3><p>Tarik nafas sebelum meneruskan misi.</p><button id="run-resume-overlay" class="run-primary" type="button">RESUME</button></div>
+            </div>
+
+            <div id="run-gameover-overlay" class="run-overlay" hidden>
+              <div class="run-overlay-card compact"><span class="run-overlay-badge danger">MISI TERHENTI</span><h3>GAME OVER</h3><p id="run-final-score">Skor akhir: 0</p><button id="run-play-again" class="run-primary" type="button">PLAY AGAIN</button></div>
+            </div>
+
+            <div id="run-complete-overlay" class="run-overlay" hidden>
+              <div class="run-overlay-card compact"><span class="run-overlay-badge success">GARISAN PENAMAT</span><h3>LEVEL COMPLETE!</h3><p id="run-complete-copy">Tahap selesai.</p><button id="run-next-level" class="run-primary" type="button">TAHAP SETERUSNYA</button></div>
+            </div>
+
+            <section id="run-math-overlay" class="run-overlay run-math-overlay" aria-labelledby="run-math-question" hidden>
+              <div class="run-math-card">
+                <span id="run-math-badge">CRYSTAL UNIT POWER</span>
+                <h3 id="run-math-question">48.5 cm = ? mm</h3>
+                <p>Jawab untuk mendapatkan perisai tenaga dan bonus skor.</p>
+                <div id="run-math-options" class="run-math-options" aria-label="Empat pilihan jawapan Hero Run"></div>
+                <div id="run-math-feedback" class="run-math-feedback" role="status" aria-live="polite"></div>
+                <button id="run-math-continue" class="run-primary" type="button" hidden>SAMBUNG LARIAN</button>
+              </div>
+            </section>
+          </div>
+
+          <div class="run-command-bar" aria-label="Kawalan PLUS ULTRA HERO RUN">
+            <button id="run-pause" class="run-command" type="button" disabled>PAUSE</button>
+            <button id="run-resume" class="run-command" type="button" hidden>RESUME</button>
+            <button id="run-restart" class="run-command" type="button">RESTART</button>
+            <span id="run-status">SEDIA</span>
+          </div>
+
+          <button id="run-jump" class="run-jump" type="button" aria-label="Lompat; tahan untuk lompatan lebih tinggi"><span>⚡</span><b>LOMPAT</b><small>TAHAN UNTUK LEBIH TINGGI</small></button>
+          <p id="run-live-status" class="sr-only" role="status" aria-live="polite">Permainan belum dimulakan.</p>
+          <p class="run-mobile-note">Wira berlari automatik. Tekan SPACE/↑, klik arena atau gunakan butang LOMPAT. Tahan seketika untuk lompatan lebih tinggi.</p>
+        </div>
+      </section>
+
+      <div class="content-wrap page-actions"><a class="back-home" href="#rumah">← Kembali ke Rumah</a><a class="cta" href="#quiz">Seterusnya: Quiz →</a></div>
+    </section>
+
+    <section id="quiz" class="page themed-page theme-tokoyami" data-page="quiz" aria-labelledby="quiz-title" hidden>
+      <div class="page-hero page-hero-character content-wrap">
+        <div><span class="eyebrow">TOKOYAMI • UJIAN BAYANG</span><h1 id="quiz-title">Quiz Penukaran Unit</h1><p>Tiga tahap: Easy, Medium dan Hard. Setiap tahap mempunyai 10 soalan. Jawab minimum 6 soalan dengan betul untuk membuka tahap seterusnya.</p></div>
+        <div class="page-character floating-hero-cutout"><img src="assets/tokoyami-floating-cutout.png" alt="Tokoyami dan Dark Shadow" width="1201" height="1309"></div>
+      </div>
+      <div class="content-wrap quiz-shell">
+        <div class="quiz-level-picker" role="group" aria-label="Pilih tahap kuiz">
+          <button type="button" data-quiz-level="0" aria-pressed="true">Easy · 0/10</button>
+          <button type="button" data-quiz-level="1" aria-pressed="false" disabled>🔒 Medium · 0/10</button>
+          <button type="button" data-quiz-level="2" aria-pressed="false" disabled>🔒 Hard · 0/10</button>
+        </div>
+        <p id="quiz-level-status" role="status" aria-live="polite"></p>
+        <div class="quiz-topbar"><span id="quiz-count">Soalan 1 / 10</span><span id="quiz-score">Markah: 0</span></div>
+        <div class="quiz-progress"><span id="quiz-progress"></span></div>
+        <div id="quiz-mentor" class="quiz-mentor" data-state="ready">
+          <div class="quiz-mentor-art"><img src="assets/tokoyami-portal-cutout.png" alt="Tokoyami menemani misi kuiz" width="1102" height="1330"><span class="quiz-mentor-orbit" aria-hidden="true"></span></div>
+          <div class="quiz-mentor-copy"><span class="eyebrow">MISI DARK SHADOW</span><p id="quiz-mentor-message">Tenang, Wira. Kita kuasai unit panjang bersama!</p><button id="quiz-concept-toggle" class="secondary-button" type="button" aria-expanded="false" aria-controls="quiz-concept">✦ Petunjuk konsep</button><p id="quiz-concept" hidden></p></div>
+        </div>
+        <div id="quiz-mission-steps" class="quiz-mission-steps" role="list" aria-label="Kemajuan sepuluh soalan"></div>
+        <article id="quiz-card" class="quiz-card">
+          <span id="quiz-round-badge" class="quiz-round-badge" aria-hidden="true">01</span>
+          <div id="quiz-energy-burst" class="quiz-energy-burst" aria-hidden="true"></div>
+          <p id="quiz-topic" class="eyebrow">PENUKARAN ASAS</p>
+          <h2 id="quiz-question">Memuatkan soalan…</h2>
+          <div id="quiz-options" class="quiz-options"></div>
+          <div id="quiz-feedback" class="quiz-feedback" role="status" aria-live="polite"></div>
+          <button id="next-question" class="cta button-cta" type="button" hidden>Soalan seterusnya →</button>
+        </article>
+        <article id="quiz-result" class="quiz-result" hidden>
+          <span class="result-star">★</span><h2>Misi Quiz Selesai!</h2><p id="result-copy"></p><strong id="final-score">0 / 10</strong>
+          <div><a href="#gamifikasi" class="secondary-button">← Kembali ke Gamifikasi</a><button id="next-quiz-level" type="button" class="cta button-cta" hidden>Tahap seterusnya →</button><button id="restart-quiz" type="button" class="secondary-button">Cuba Lagi</button><a href="#sijil" class="cta">Lihat Sijil →</a></div>
+        </article>
+        <div class="page-actions"><a class="back-home" href="#rumah">← Kembali ke Rumah</a><a class="cta" href="#sijil">Seterusnya: Sijil →</a></div>
+      </div>
+    </section>
+
+    <section id="sijil" class="page themed-page theme-allmight" data-page="sijil" aria-labelledby="cert-title" hidden>
+      <div class="page-hero page-hero-character content-wrap">
+        <div><span class="eyebrow">ALL MIGHT • DEWAN KEJAYAAN</span><h1 id="cert-title">Sijil Wira Matematik</h1><p>Lengkapkan Quiz dan capai sekurang-kurangnya 6/10 untuk membuka penjana sijil.</p></div>
+        <figure class="certificate-allmight-portrait"><img src="assets/certificate-allmight-energy-cutout.png" alt="All Might bersilang tangan dengan tenaga emas dan biru, tanpa latar belakang" width="1199" height="1312"></figure>
+      </div>
+      <div class="content-wrap certificate-layout">
+        <form id="certificate-form" class="certificate-form">
+          <h2>Identiti Wira</h2>
+          <label for="student-name">Nama murid</label>
+          <input id="student-name" name="studentName" type="text" maxlength="50" placeholder="Contoh: Nur Aisyah" required>
+          <div class="achievement-summary" aria-label="Keputusan rasmi kuiz">
+            <span>Asas <b id="cert-score-basic">Memuatkan…</b></span>
+            <span>Sederhana <b id="cert-score-medium">Memuatkan…</b></span>
+            <span>Sukar <b id="cert-score-hard">Memuatkan…</b></span>
+            <span>Status keseluruhan <b id="cert-quiz-score">Menyemak…</b></span>
+            <span>Skor Gamifikasi <b id="cert-game-score">0</b></span>
+          </div>
+          <p id="certificate-requirement" class="requirement" role="status">Menyemak keputusan rasmi kuiz daripada Supabase…</p>
+          <button id="generate-certificate" type="submit" class="cta button-cta" disabled>Jana Sijil</button>
+          <button id="print-certificate" type="button" class="secondary-button" disabled>🖨 Cetak / Simpan PDF</button>
+          <small>Sijil ini ialah rekod aktiviti pembelajaran dalam laman ini dan bukan sijil rasmi mana-mana institusi.</small>
+        </form>
+        <article id="certificate" class="certificate" aria-label="Pratonton sijil">
+          <div class="cert-corner corner-a"></div><div class="cert-corner corner-b"></div>
+          <div class="cert-mark">PLUS<br><span>ULTRA!</span></div>
+          <p class="cert-kicker">PLUS ULTRA MATH HEROES</p>
+          <h2>SIJIL WIRA MATEMATIK</h2>
+          <p>Dengan bangganya diberikan kepada</p>
+          <strong id="certificate-name">NAMA WIRA</strong>
+          <p>kerana telah menyertai</p>
+          <h3>MISI UKURAN PAHLAWAN</h3>
+          <p id="certificate-detail">Matematik Tahun 5 • Panjang dan Penukaran Unit</p>
+          <div class="cert-footer"><span><b id="certificate-date">—</b><small>Tarikh</small></span><span class="cert-seal">★</span><span><b id="certificate-rank">Pelatih Wira</b><small>Pangkat</small></span></div>
+          <p class="cert-disclaimer">Sijil aktiviti pembelajaran — bukan sijil rasmi institusi.</p>
+        </article>
+      </div>
+      <div class="content-wrap page-actions"><a class="back-home" href="#rumah">← Kembali ke Rumah</a><a class="cta" href="#nota">Ulang Kaji Nota →</a></div>
+    </section>
+    <section id="refleksi" class="page themed-page theme-froppy" data-page="refleksi" aria-labelledby="hero-reflection-title" hidden>
+      <div class="froppy-world" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="content-wrap froppy-academy">
+        <section id="hero-reflection" class="hero-reflection froppy-garden-shell" aria-label="Empat soalan refleksi">
+          <form id="hero-reflection-form" class="froppy-garden-form">
+            <aside class="froppy-garden-left">
+              <div class="reflection-energy-badge">HERO REFLECTION ENERGY</div>
+              <div class="garden-title-panel">
+                <span class="froppy-mission-badge">U.A. HERO REFLECTION MISSION</span>
+                <h1 id="hero-reflection-title">MISI REFLEKSI<br><em>PAHLAWAN</em></h1>
+                <strong>FROPPY'S REFLECTION GARDEN</strong>
+                <p>“Setiap wira mempunyai kisah pembelajaran!”</p>
+              </div>
+              <div class="froppy-character-stage">
+                <span class="aqua-orbit orbit-one"></span><span class="aqua-orbit orbit-two"></span>
+                <span class="aqua-bubble bubble-one"></span><span class="aqua-bubble bubble-two"></span><span class="aqua-bubble bubble-three"></span>
+                <img class="froppy-portrait" src="assets/froppy-reflection-hero.png" alt="Froppy (Tsuyu Asui)" width="1069" height="1472">
+                <div class="aqua-platform"><span>FROPPY</span></div>
+              </div>
+              <label class="froppy-class-card"><span class="class-icon" aria-hidden="true">👥</span><span class="class-copy"><b>Pilih kelas</b><small>Kelas wira anda</small></span><select name="class_id" required><option value="">Memuatkan kelas...</option></select></label>
+            </aside>
+            <div class="froppy-garden-right">
+              <div class="froppy-progress-panel">
+                <div><span>HERO REFLECTION ENERGY</span><b>Lengkapkan 4 misi</b></div>
+                <div class="froppy-crystals" aria-label="Kemajuan jawapan: 0 daripada 4"><i data-crystal="1">◆</i><i data-crystal="2">◆</i><i data-crystal="3">◆</i><i data-crystal="4">◆</i></div>
+                <div class="froppy-energy-track" role="progressbar" aria-label="Hero Reflection Energy" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><span></span></div>
+              </div>
+              <div class="froppy-mission-stack">
+                <label class="froppy-question mission-green" data-mission="01"><span class="mission-number">01</span><span class="mission-icon" aria-hidden="true">📐</span><b>01 · Apakah perkara baharu yang kamu pelajari tentang penukaran unit panjang hari ini?</b><textarea name="one" minlength="1" maxlength="2000" required placeholder="Catat penemuan Matematik anda..."></textarea><span class="mission-water" aria-hidden="true"></span></label>
+                <label class="froppy-question mission-blue" data-mission="02"><span class="mission-number">02</span><span class="mission-icon" aria-hidden="true">🏆</span><b>02 · Aktiviti manakah dalam PLUS ULTRA MATH HEROES yang paling membantu kamu memahami penukaran unit panjang? Mengapa?</b><textarea name="two" minlength="1" maxlength="2000" required placeholder="Kongsikan aktiviti pilihan anda..."></textarea><span class="mission-water" aria-hidden="true"></span></label>
+                <label class="froppy-question mission-purple" data-mission="03"><span class="mission-number">03</span><span class="mission-icon" aria-hidden="true">💎</span><b>03 · Apakah kesukaran yang kamu hadapi semasa mempelajari penukaran unit panjang?</b><textarea name="three" minlength="1" maxlength="2000" required placeholder="Terangkan cabaran yang anda hadapi..."></textarea><span class="mission-water" aria-hidden="true"></span></label>
+                <label class="froppy-question mission-gold" data-mission="04"><span class="mission-number">04</span><span class="mission-icon" aria-hidden="true">💡</span><b>04 · Apakah cadangan kamu untuk menjadikan pembelajaran Matematik melalui PLUS ULTRA MATH HEROES lebih menarik dan berkesan?</b><textarea name="four" minlength="1" maxlength="2000" required placeholder="Berikan idea Plus Ultra anda..."></textarea><span class="mission-water" aria-hidden="true"></span></label>
+              </div>
+              <button class="hero-submit froppy-submit" type="submit"><span class="submit-plane" aria-hidden="true">➤</span><span>HANTAR REFLEKSI</span><small>SIMPAN MISI KE SUPABASE</small></button>
+              <p id="hero-reflection-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+          <div class="froppy-victory" aria-hidden="true"><span>✨</span><strong>PLUS ULTRA!</strong><b>REFLEKSI BERJAYA DISIMPAN!</b><i>◆ ◆ ◆ ◆</i></div>
+        </section>
+      </div><div class="content-wrap page-actions"><a class="back-home" href="#sijil">← Kembali ke Sijil</a></div>
+    </section>
+  </main>
+
+  <footer><strong>PLUS ULTRA MATH HEROES</strong><span>Matematik Tahun 5 • Panjang dan Penukaran Unit • SP 5.1.1</span><a href="#rumah">Kembali ke atas ↑</a></footer>
+
+  <section id="deku-chat" class="deku-chat" role="dialog" aria-labelledby="deku-chat-title" hidden>
+    <header class="deku-chat-header">
+      <span class="deku-chat-avatar" aria-hidden="true"></span>
+      <span><strong id="deku-chat-title">GURU DEKU AI</strong><small>PLUS ULTRA TUTOR</small></span>
+      <button id="deku-new-chat" type="button" title="Perbualan baharu" aria-label="Mulakan perbualan baharu">↻</button>
+      <button id="deku-close" type="button" title="Tutup" aria-label="Tutup Guru Deku AI">×</button>
+    </header>
+    <div id="deku-messages" class="deku-messages" aria-live="polite">
+      <article class="deku-message deku-answer">Hai, Wira! Saya Guru Deku AI. Saya sedia membantu kamu belajar, menjawab soalan dan memahami perkara baharu. Tanya sahaja apa-apa soalan. PLUS ULTRA!</article>
+    </div>
+    <div id="deku-thinking" class="deku-thinking" role="status" hidden><span></span><span></span><span></span> Deku sedang berfikir...</div>
+    <p id="deku-error" class="deku-error" role="alert" hidden></p>
+    <form id="deku-form" class="deku-form">
+      <label class="sr-only" for="deku-input">Taip soalan untuk Guru Deku</label>
+      <textarea id="deku-input" rows="2" maxlength="800" placeholder="Tanya Guru Deku…" required></textarea>
+      <button id="deku-send" type="submit">Hantar ➤</button>
+    </form>
+    <small class="deku-chat-note">Guru Deku boleh tersilap. Semak fakta penting bersama guru atau buku teks.</small>
+  </section>
+  <button id="deku-fab" class="deku-fab" type="button" aria-controls="deku-chat" aria-expanded="false" aria-label="Buka Guru Deku AI"><span class="deku-fab-avatar" aria-hidden="true"></span><span class="deku-fab-label">Tanya Guru Deku</span></button>
+
+  <button id="music-toggle" class="music-toggle" type="button" aria-pressed="false" aria-label="Hidupkan muzik latar"><span class="music-icon" aria-hidden="true">♫</span><span id="music-label">Muzik OFF</span></button>
+  <audio id="theme-music" src="assets/theme-song.mp3" preload="metadata" loop></audio>
+  <button id="metadata-open" class="metadata-open ua-hero-id" type="button" aria-haspopup="dialog" aria-controls="metadata-dialog" aria-expanded="false" hidden><svg class="metadata-circuit" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true"><rect class="metadata-blue" x="3" y="3" width="394" height="194" rx="20" pathLength="1000"/><rect class="metadata-gold" x="3" y="3" width="394" height="194" rx="20" pathLength="1000"/></svg><span class="ua-id-icon" aria-hidden="true"><i></i><b></b><em></em></span><span class="ua-id-copy"><small>U.A. HERO PROFILE</small><strong>METADATA</strong></span><span class="ua-id-chip" aria-hidden="true">UA</span></button>
+  <dialog id="metadata-dialog" class="metadata-dialog" aria-labelledby="metadata-title">
+    <div class="metadata-panel ua-creator-profile"><svg class="metadata-circuit" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true"><rect class="metadata-blue" x="3" y="3" width="394" height="194" rx="20" pathLength="1000"/><rect class="metadata-gold" x="3" y="3" width="394" height="194" rx="20" pathLength="1000"/></svg>
+      <span class="ua-profile-geometry geometry-one" aria-hidden="true"></span><span class="ua-profile-geometry geometry-two" aria-hidden="true"></span><span class="ua-profile-energy" aria-hidden="true"></span>
+      <button id="metadata-close" class="metadata-close ua-profile-close" type="button" aria-label="Tutup profil pencipta"><span aria-hidden="true">×</span><small>TUTUP</small></button>
+      <header class="ua-profile-heading"><span class="metadata-kicker">U.A. DEVELOPER PROFILE</span><h2 id="metadata-title">PLUS ULTRA — <em>HERO CREATOR</em></h2><p>MEET THE CREATOR</p></header>
+      <div class="metadata-layout ua-profile-layout">
+        <figure class="metadata-photo ua-profile-photo"><div class="ua-photo-emblem" aria-hidden="true">UA</div><svg class="metadata-circuit" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true"><rect class="metadata-blue" x="3" y="3" width="394" height="194" rx="20" pathLength="1000"/><rect class="metadata-gold" x="3" y="3" width="394" height="194" rx="20" pathLength="1000"/></svg><div class="ua-photo-stage"><img src="assets/creator-ammar-original.jpeg" alt="Foto asal Ammar Zikri bin Zainul Pakri" width="1170" height="1705"></div><figcaption><span>HERO CREATOR</span><b>IDENTITY VERIFIED</b></figcaption></figure>
+        <div class="metadata-copy ua-profile-copy"><dl class="ua-profile-cards"><div class="ua-info-card card-name"><span class="ua-info-icon" aria-hidden="true">★</span><dt>KAD 01 — NAMA</dt><dd>AMMAR ZIKRI BIN ZAINUL PAKRI</dd></div><div class="ua-info-card card-age"><span class="ua-info-icon" aria-hidden="true">19</span><dt>KAD 02 — UMUR</dt><dd>19 TAHUN</dd></div><div class="ua-info-card card-campus"><span class="ua-info-icon" aria-hidden="true">⌂</span><dt>KAD 03 — INSTITUSI</dt><dd>IPG KAMPUS KENT</dd></div><div class="ua-info-card card-origin"><span class="ua-info-icon" aria-hidden="true">◆</span><dt>KAD 04 — ASAL</dt><dd>JASIN, MELAKA</dd></div></dl><div class="ua-profile-rank"><span>U.A. CREATOR STATUS</span><strong>PLUS ULTRA</strong><i></i></div></div>
+      </div>
+    </div>
+  </dialog>
+  <script src="app.js"></script>
+  <script src="metadata.js"></script>
+</body>
+</html>
