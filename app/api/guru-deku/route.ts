@@ -12,7 +12,53 @@ Jawab dengan tepat, mesra, ringkas dan sesuai dengan umur murid. Untuk Matematik
 Jika soalan kabur, minta murid menjelaskan. Jika tidak pasti, nyatakan ketidakpastian; jangan mereka fakta, sumber atau mendakwa anda melayari internet.
 Untuk halaman Quiz, bantu menerangkan konsep tanpa mendedahkan jawapan soalan semasa kecuali murid menyatakan mereka sudah menjawab dan meminta penerangan.
 Gunakan ungkapan seperti “Mari kita selesaikan bersama-sama, Wira!” atau “PLUS ULTRA!” secara sederhana.
-Jangan minta atau menyimpan maklumat peribadi sensitif murid.`;
+Jangan minta atau menyimpan maklumat peribadi sensitif murid.
+FORMAT JAWAPAN: Tulis dalam teks biasa sahaja. Jangan gunakan Markdown (seperti ** atau #) dan jangan gunakan LaTeX (seperti $, \\times atau \\frac). Gunakan simbol × untuk darab, ÷ untuk bahagi dan tulis pecahan seperti 1/2.`;
+
+const latexSymbols: Record<string, string> = {
+  times: "×", div: "÷", cdot: "×", pm: "±", mp: "∓", le: "≤", leq: "≤", ge: "≥", geq: "≥",
+  neq: "≠", ne: "≠", approx: "≈", circ: "°", degree: "°", pi: "π", infty: "∞",
+  rightarrow: "→", to: "→", Rightarrow: "⇒", leftarrow: "←", ldots: "...", cdots: "...", dots: "...",
+  percent: "%",
+};
+
+// Converts Markdown/LaTeX-styled model output into plain, child-friendly text.
+function toPlainText(input: string) {
+  let text = input.replace(/\r\n/g, "\n").replace(/\\\\(?![()\[\]])/g, "\n");
+  // Math delimiters: $$..$$, $..$, \(..\), \[..\]
+  text = text.replace(/\\[()\[\]]/g, "").replace(/\$+/g, "");
+  // \text{..}, \mathrm{..}, \textbf{..} etc. -> contents
+  text = text.replace(/\\(?:text|textbf|textit|mathrm|mathbf|mathit|operatorname|boxed)\s*\{([^{}]*)\}/g, "$1");
+  // Fractions (repeat to resolve nesting)
+  const frac = /\\[dt]?frac\s*\{([^{}]*)\}\s*\{([^{}]*)\}/g;
+  const wrap = (v: string) => (/^[\w.,]+$/.test(v.trim()) ? v.trim() : `(${v.trim()})`);
+  for (let i = 0; i < 5 && frac.test(text); i++) {
+    frac.lastIndex = 0;
+    text = text.replace(frac, (_m, a: string, b: string) => `${wrap(a)}/${wrap(b)}`);
+  }
+  text = text.replace(/\\[dt]?frac\s*(\d)\s*(\d)/g, "$1/$2");
+  text = text.replace(/\\sqrt\s*\{([^{}]*)\}/g, "√($1)");
+  text = text.replace(/\^\s*\{?\\circ\}?/g, "°");
+  text = text.replace(/\\(?:left|right|displaystyle|quad|qquad)\b/g, " ");
+  text = text.replace(/\\[,;:! ]/g, " ");
+  text = text.replace(/\\%/g, "%");
+  text = text.replace(/\\([A-Za-z]+)/g, (_m, name: string) => latexSymbols[name] ?? name);
+  text = text.replace(/\\/g, "");
+  text = text.replace(/[{}]/g, "");
+  // Markdown
+  text = text.replace(/(\d)\s*\*\s*(?=\d)/g, "$1 × ");
+  text = text.replace(/\*\*([^*]+)\*\*/g, "$1").replace(/__([^_]+)__/g, "$1");
+  text = text.replace(/^\s*[*-]\s+/gm, "• ");
+  text = text.replace(/(^|[^\w*])\*([^*\n]+)\*(?!\w)/g, "$1$2");
+  text = text.replace(/\*/g, "");
+  text = text.replace(/^\s{0,3}#{1,6}\s*/gm, "");
+  text = text.replace(/^\s*>\s?/gm, "");
+  text = text.replace(/`+([^`]*)`+/g, "$1");
+  text = text.replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, "$1 ($2)");
+  // Tidy whitespace
+  text = text.replace(/[ \t]{2,}/g, " ").replace(/ +\n/g, "\n").replace(/\n{3,}/g, "\n\n");
+  return text.trim();
+}
 
 function json(data: unknown, status = 200) {
   return Response.json(data, {
@@ -151,6 +197,7 @@ export async function POST(request: Request) {
     ?.map((part: { text?: unknown }) => typeof part.text === "string" ? part.text : "")
     .join("")
     .trim();
-  if (!answer) return json({ error: "Jawapan Guru Deku tidak dapat dibaca. Sila cuba lagi." }, 502);
-  return json({ answer });
+  const plainAnswer = answer ? toPlainText(answer) : "";
+  if (!plainAnswer) return json({ error: "Jawapan Guru Deku tidak dapat dibaca. Sila cuba lagi." }, 502);
+  return json({ answer: plainAnswer });
 }
