@@ -128,7 +128,12 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   try {
     testConfig();
-    if (request.headers.get('origin') !== new URL(request.url).origin) return reply({ error: 'Origin ditolak.' }, 403);
+   const requestOrigin = request.headers.get('origin');
+const siteOrigin = new URL(request.url).origin;
+
+if (requestOrigin && requestOrigin !== siteOrigin) {
+  return reply({ error: 'Origin ditolak.' }, 403);
+}
     if (!request.headers.get('content-type')?.startsWith('application/json')) return reply({ error: 'JSON diperlukan.' }, 415);
     const raw = await request.text();
     if (raw.length > 16000) return reply({ error: 'Permintaan terlalu besar.' }, 413);
